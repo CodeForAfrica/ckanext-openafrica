@@ -1,0 +1,59 @@
+{% extends 'organization/read_base.html' %}
+
+{% set organization=c.group_dict %}
+
+{% block primary_action %}
+{% endblock %}
+
+{% block primary_content %}
+  {% snippet 'organization/snippets/organization.html', organization=organization, show_nums=true %}
+{% endblock %}
+
+{% block package_list %}
+  <div class="organization-actions">
+    <div class="sort-datasets">
+      {% if c.page.items %}
+        <span>Ordenar por:</span>
+        {% if c.sort_by_selected != "score desc" %}
+          <a class="active" href="{{ url }}?sort=metadata_modified+desc">M&aacute;s Nuevo</a>
+          <span>/</span>
+          <a href="{{ url }}?sort=score+desc">M&aacute;s Popular</a>
+        {% else %}
+          <a href="{{ url }}?sort=metadata_modified+desc">M&aacute;s Nuevo</a>
+          <span>/</span>
+          <a class="active" href="{{ url }}?sort=score+desc">M&aacute;s Popular</a>
+        {% endif %}
+      {% endif %}
+    </div>
+    <div class="pull-right">
+      {% if h.check_access("organization_update", {"id": organization.id}) %}
+        {% link_for _("Manage"), controller="organization", action="edit", id=organization.name, class_="btn", icon="wrench" %}
+      {% endif %}
+      {% if h.check_access("package_create", { "owner_org": organization.id }) %}
+        {% link_for _("Add Dataset"), controller="package", action="new", group=organization.id, class_="btn btn-primary", icon="plus-sign-alt" %}
+      {% endif %}
+    </div>
+    <div class="filter-datasets">
+      {% set tags=h.get_facet_items_dict('tags') %}
+      {% snippet 'organization/snippets/tag_list.html', tags=tags, _tag_class='label', _organization_url=organization.name %}
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  {% if c.page.items %}
+    {{ h.snippet('snippets/package_list.html', packages=c.page.items) }}
+  {% endif %}
+{% endblock %}
+
+{% block page_pagination %}
+  {{ c.page.pager(q=c.q) }}
+{% endblock %}
+
+{% block apps_list %}
+  <h3>Apps C&iacute;vicas</h3>
+  <p>Descubre qui&eacute;nes usan y c&oacute;mo se usan los datos abiertos<br />en M&eacute;xico para mejorar el pa&iacute;s.</p>
+  {% resource "datamx_theme/datamx_theme_load_apps.js" %}
+  <div
+    data-module="datamx_theme_load_apps"
+    data-module-organization="{{ organization.name }}" >
+  </div>
+{% endblock %}

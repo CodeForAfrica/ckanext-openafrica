@@ -1,0 +1,29 @@
+{% ckan_extends %}
+
+{% block footer_content %}
+  <div class="footer-links">
+    <div class="logo">
+      <a href="http://www.codeandomexico.org">
+        <img src="/logo_cmx.png" />
+      </a>
+      <h5>2013 - 2014 C&iacute;vica Digital A.C.</h5>
+    </div>
+    <div class="all-links">
+      <ul class="unstyled">
+        <li><a href="mailto:datamx@codeandomexico.org">{{ _('Contact Us') }}</a></li>
+        <li>Twitter: <a href="http://twitter.com/datamx_io" target="_blank">@Datamx_io</a></li>
+        <li><a href="http://paginas.datamx.io/faq/"> FAQ: preguntas frecuentes</a></li>
+        <li><a href="http://paginas.datamx.io/about/">{{ _('About {0}').format(g.site_title) }}</a></li>
+        {% set api_url = 'http://docs.ckan.org/en/{0}/api.html'.format(g.ckan_doc_version) %}
+        <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
+        <li><a href="http://www.codeandomexico.org/retos">Retos</a></li>
+      </ul>
+
+      <ul class="unstyled">
+        <li>{% snippet "snippets/language_selector.html" %}</li>
+        <li><a href="http://ckan.org">Powered by CKAN</a></li>
+        <li><a href="http://paginas.datamx.io/changelog/">Changelog: bit&aacute;cora del producto</a></li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}
