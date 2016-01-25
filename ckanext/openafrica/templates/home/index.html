@@ -2,81 +2,61 @@
 
 {% block primary_content %}
   {% snippet 'home/snippets/search.html'  %}
-  <p class="joined-orgs-msg">Hay <b><a href="/organization">{{ h.get_site_statistics()["organization_count"] }}</a></b> organizaciones de la sociedad civil y gobiernos publicando <br />sus datos abiertos a la comunidad</p>
+  <p class="joined-orgs-msg"><b><a href="/organization">{{ h.get_site_statistics()["organization_count"] }}</a></b> organizations or civil society groups<br />currently sharing data</p>
   <div class="roles">
-    <h2>&iquest;Qui&eacute;nes usan datamx?</h2>
-    <p>Descubre qui&eacute;nes usan y c&oacute;mo se usan los datos abiertos<br />en M&eacute;xico para mejorar el pa&iacute;s.</p>
+    <h2>Who uses openAfrica?</h2>
+    <p>Find out who and how several actors are using open data to address some of Africa's challenges
+<br /> address some of Africa's challenges</p>
     <div class="roles-container">
       <div class="frame-round frame-round-white-bg">
-        <h2>Creadores</h2>
-        <p>APIs Visualizaciones Open source Datos abiertos</p>
-        <a class="button button-green" href="http://docs.ckan.org/en/ckan-2.2/api.html">API Docs</a>
+        <h2>Creators</h2>
+        <p>Open source and open data API's and views</p>
+        <a class="button button-green" href="http://docs.ckan.org/en/latest/api/">API Docs</a>
       </div>
       <div class="roles-sample roles-sample-green-bg frame-round">
-        <h2>App C&iacute;vicas</h2>
-        <p><a href="http://reportesapao.oaxaca.gob.mx/" target="_blank">URBEM, plataforma para reportes ciudadanos en Oaxaca.</a></p>
+        <h2>Civic Apps</h2>
+        <p><a href="http://www.codeforafrica.org/" target="_blank">Apps by Code4Africa such as GotToVote, StarHealth,Grano  and sourceAfrica</a></p>
       </div>
     </div>
     <div class="roles-container">
       <div class="frame-round frame-round-white-bg">
-        <h2>Gobiernos</h2>
-        <p>Publica<br />Mide<br />Comparte<br />Datos<br /></p>
+        <h2>Governments</h2>
+        <p>Publish<br />Measure<br />Share<br />Data<br /></p>
         <a class="button button-blue" href="/dataset/new">Publicar</a>
       </div>
       <div class="roles-sample roles-sample-blue-bg frame-round">
-        <h2>Transparencia</h2>
-        <p><a href="http://oaxtransparente.datamx.io" target="_blank">Abre tus datos a la comunidad y fomenta la innovación cívica</a></p>
+        <h2>Transparency</h2>
+        <p><a href="" target="_blank">Open your information to the community and foster civic innovation</a></p>
       </div>
     </div>
     <div class="roles-container">
       <div class="roles-sample roles-sample-yellow-bg frame-round">
-        <h2>Presupuestos</h2>
-        <p><a href="http://alcalde-como-vamos.datamx.io" target="_blank">Analiza los presupuestos de la zona metropolitana de Monterrey.</a></p>
+        <h2>Budgets</h2>
+        <p><a href="" target="_blank"></a></p>
       </div>
       <div class="frame-round frame-round-white-bg">
-        <h2>Periodistas</h2>
-        <p>Visualiza<br />Analiza<br />Descubre<br />Datos abiertos</p>
-        <a class="button button-yellow" href="/dataset">Explorar</a>
+        <h2>Jounralists</h2>
+        <p>Visualize<br />Analyze<br />Discover<br />Open Data</p>
+        <a class="button button-yellow" href="/dataset">Explore</a>
       </div>
     </div>
     <div class="roles-container">
       <div class="roles-sample roles-sample-orange-bg frame-round">
-        <h2>Visualizaciones</h2>
-        <p><a href="http://cuantodebemos.mx" target="_blank">Conoce la deuda de tu estado. Encuéntralo en CuantoDebemos.mx</a></p>
+        <h2>Visualizations</h2>
+        <p><a href="" target="_blank"></a></p>
       </div>
       <div class="frame-round frame-round-white-bg">
-        <h2>Sociedad</h2>
-        <p>Decide<br />Descubre<br />Act&uacute;a<br />Datos abiertos</p>
-        <a class="button button-orange" href="/dataset">Visualizar</a>
+        <h2>Society</h2>
+        <p>Decide<br />Discover<br />Act<br />Open Data</p>
+        <a class="button button-orange" href="/dataset">Visualize</a>
       </div>
     </div>
     <div class="clearfix"></div>
   </div>
   {% snippet "home/snippets/subscription.html" %}
   <div class="collaborators">
-    <div class="allies">
-      <h2>Nuestros Aliados</h2>
-      <a href="http://imco.org.mx/home/" target="_blank">
-        <img src="/imco_logo.jpg" />
-      </a>
-      <a href="http://www.oaxtransparente.oaxaca.gob.mx/" target="_blank">
-        <img src="/oaxtransparente_logo.png" />
-      </a>
-      <a href="http://www.comovamosnl.org/" target="_blank">
-        <img src="/alcalde_logo.png" />
-      </a>
-    </div>
-    <div class="community">
-      <h2>Parte de la comunidad</h2>
-      <a href="http://opendata.mx" target="_blank">
-        <img src="/opendatamx_logo.png" />
-      </a>
-    </div>
-    <div class="supporters">
-      <h2>Con apoyo de</h2>
-      <a href="http://www.avina.net/" target="_blank">
-        <img src="/avina_americas.png" />
-      </a>
-    </div>
+      <div class="partner-logos">
+          {% snippet 'home/snippets/home_partner_logos.html' %}
+      </div>
   </div>
 {% endblock %}
