@@ -7,6 +7,7 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
 
     '''
     plugins.implements(plugins.IConfigurer)
+    plugins.implements(plugins.IPackageController)
     plugins.implements(plugins.IRoutes, inherit=True)
 
     def update_config(self, config):
@@ -31,3 +32,6 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
         map.connect('/about/contact-us',
                     controller='ckanext.openafrica.controller:CustomPageController', action='contact')
         return map
+    def before_index(self, pkg_dict):
+        pkg_dict['year'] = 2016
+        return pkg_dict
