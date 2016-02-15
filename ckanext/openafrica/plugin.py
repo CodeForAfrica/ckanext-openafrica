@@ -32,6 +32,3 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
         map.connect('/about/contact-us',
                     controller='ckanext.openafrica.controller:CustomPageController', action='contact')
         return map
-    def before_index(self, pkg_dict):
-        pkg_dict['year'] = 2016
-        return pkg_dict
