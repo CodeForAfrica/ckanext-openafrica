@@ -24,12 +24,15 @@ body {
 .navbar-inner {
   border: none;
   background: #283858;
+  border-radius: 0px;
 }
 
 .navbar {
   margin: 0px;
   font-weight: 200;
   font-size: 15px;
+  padding-bottom: 60px;
+  /*This was to allow the main to flow down and show the breadcrumbs*/
 }
 
 .navbar .nav {
@@ -67,6 +70,9 @@ body {
   vertical-align: middle;
 }
 
+.navbar-fixed-top .container {
+width: auto;!important;
+}
 .navbar .nav li.dropdown.open>.dropdown-toggle {
   background-color: #283858;
   color: #ffffff;
@@ -87,6 +93,8 @@ body {
   text-align: center;
   padding: 0px;
   background-color: #121E34;
+  /*we added this*/
+  margin: 0px 0 0 0;
 }
 
 .highlighted {
@@ -163,9 +171,10 @@ body {
 .module-content {
   margin: 0px;
   background-color: #EEEEEE;
-  padding: 20px 40px;
+  padding: 40px 40px;
   border-bottom: 1px solid #BEBEBE;
 }
+
 
 /* who uses it */
 .roles {
@@ -188,6 +197,7 @@ body {
   color: #858585;
   margin: 10px;
 }
+
 
 div.frame-round {
   padding: 20px 50px;
@@ -656,7 +666,7 @@ div.sort-datasets a {
 }
 
 @media (min-width: 1200px){
-  .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  .container, .navbar-static-top .container, .navbar-fixed-bottom .container {
     width: 940px;
   }
 }
