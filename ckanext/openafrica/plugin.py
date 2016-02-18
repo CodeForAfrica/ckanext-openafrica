@@ -8,6 +8,7 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
     '''
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IRoutes, inherit=True)
+    plugins.implements(plugins.ITemplateHelpers)
 
     def update_config(self, config):
         toolkit.add_template_directory(config, 'templates')
@@ -31,3 +32,17 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
         map.connect('/about/contact-us',
                     controller='ckanext.openafrica.controller:CustomPageController', action='contact')
         return map
+
+    def get_helpers(self):
+        """
+        All functions, not starting with __ in the ckanext.openafrica.lib
+        module will be loaded and made available as helpers to the
+        templates.
+        """
+        from ckanext.openafrica.lib import helpers
+        from inspect import getmembers, isfunction
+
+        helper_dict = {}
+
+        funcs = [o for o in getmembers(helpers, isfunction)]
+        return dict([(f[0],f[1],) for f in funcs if not f[0].startswith('__')])
