@@ -134,7 +134,8 @@ width: auto;!important;
 .homepage .module-search .module-content, .organization-page.module-content {
   padding: 130px 0px;
   margin: 0px;
-  height: 250px;
+  height: auto;
+  /*height: 250px;*/
   background: url(/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -539,6 +540,26 @@ input.button {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
 }
 
+#added this for presentation of the harvest grid overflow
+.dataset-item .dataset-content p {
+    overflow: hidden;
+    font-weight: 200;
+    font-size: 15px;
+    color: #5B5B5B;
+    position: relative;
+    height: 4.0em;
+}
+
+.dataset-item .dataset-content p:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 1.3em;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+}
 .dataset-item .dataset-content .dataset-heading {
   font-size: 20px;
   overflow: hidden;
