@@ -7,7 +7,6 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
 
     '''
     plugins.implements(plugins.IConfigurer)
-    plugins.implements(plugins.IPackageController)
     plugins.implements(plugins.IRoutes, inherit=True)
 
     def update_config(self, config):
