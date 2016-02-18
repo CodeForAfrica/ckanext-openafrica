@@ -419,7 +419,7 @@ input.button {
   padding: 10px;
   width: 18em;
   font-family: inherit;
-} 
+}
 
 /* Organization */
 
@@ -760,6 +760,10 @@ div.sort-datasets a {
   }
 }
 
+  .media-item {
+        position: relative;!important;
+        width: 179px;!important;
+  }
 @media (max-width: 767px) {
   body {
     padding: 0;
