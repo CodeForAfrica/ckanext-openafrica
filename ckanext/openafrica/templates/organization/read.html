@@ -13,15 +13,15 @@
   <div class="organization-actions">
     <div class="sort-datasets">
       {% if c.page.items %}
-        <span>Ordenar por:</span>
+        <span>Order by:</span>
         {% if c.sort_by_selected != "score desc" %}
-          <a class="active" href="{{ url }}?sort=metadata_modified+desc">M&aacute;s Nuevo</a>
+          <a class="active" href="{{ url }}?sort=metadata_modified+desc">Last Modified</a>
           <span>/</span>
-          <a href="{{ url }}?sort=score+desc">M&aacute;s Popular</a>
+          <a href="{{ url }}?sort=score+desc">Popular</a>
         {% else %}
-          <a href="{{ url }}?sort=metadata_modified+desc">M&aacute;s Nuevo</a>
+          <a href="{{ url }}?sort=metadata_modified+desc">Last Modified</a>
           <span>/</span>
-          <a class="active" href="{{ url }}?sort=score+desc">M&aacute;s Popular</a>
+          <a class="active" href="{{ url }}?sort=score+desc">Popular</a>
         {% endif %}
       {% endif %}
     </div>
