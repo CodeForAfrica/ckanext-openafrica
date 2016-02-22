@@ -540,7 +540,6 @@ input.button {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
 }
 
-/*added this for presentation of the harvest grid overflow*/
 .dataset-item .dataset-content p {
     overflow: hidden;
     font-weight: 200;
