@@ -1,3 +1,4 @@
 *.pyc
+deploy/.vagrant/
 ckanext_openafrica.egg-info/
 *.swp
