@@ -25,6 +25,27 @@
   #become_user: "{{ ckan_user.name }}"
   pip: requirements="{{ ckan_virtualenv }}/src/ckan/requirements.txt" virtualenv={{ ckan_virtualenv }} state=present
 
+- name: get openafrica
+  action: git repo=https://github.com/jmwenda/ckanext-openafrica dest={{ ckan_virtualenv }}/src/ckanext-openafrica version=develop
+
+- name: run setup.py develop for openafrica
+  action: command chdir={{ ckan_virtualenv }}/src/ckanext-openafrica/ ../../bin/python setup.py develop
+
+- name: get harvest
+  action: git repo=https://github.com/ckan/ckanext-harvest.git dest={{ ckan_virtualenv }}/src/ckanext-harvest version=release-datagov
+
+- name: run setup.py develop for the harvester
+  action: command chdir={{ ckan_virtualenv }}/src/ckanext-harvest/ ../../bin/python setup.py develop
+
+- name: install requirements for harvest
+  action: pip requirements={{ ckan_virtualenv }}/src/ckanext-harvest/pip-requirements.txt virtualenv={{ ckan_virtualenv}}
+
+- name: get showcase
+  action: git repo=https://github.com/ckan/ckanext-showcase dest={{ ckan_virtualenv }}/src/ckanext-showcase version=master
+
+- name: run setup.py develop for showcase
+  action: command chdir={{ ckan_virtualenv }}/src/ckanext-showcase/ ../../bin/python setup.py develop
+
 - name: Create ckan postgresql user
   become_user: postgres
   postgresql_user: name={{ ckan_db.username }} password={{ ckan_db.password }}
@@ -80,6 +101,9 @@
 #  command: "{{ ckan_virtualenv }}/bin/paster db init -c {{ ckan_conf_dir }}/production.ini"
 #  args:
 #    chdir: "{{ ckan_virtualenv }}/src/ckan"
+
+- name: Rebuild search index
+  command: "{{ckan_virtualenv}}/bin/paster --plugin=ckan search-index rebuild -c {{ ckan_conf_dir}}/production.ini"
 
 - name: Create apache2 default vhost for ckan
   template: src="apache/000-ckan-default.conf.j2" dest="/etc/apache2/sites-available/000-default.conf" owner=root group=root mode=0644
