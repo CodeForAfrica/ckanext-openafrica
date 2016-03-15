@@ -28,6 +28,7 @@
     - python-pip
     - python-pycurl
     - supervisor
+    - rabbitmq-server
   tags: packages
 
 - name: Install virtualenv

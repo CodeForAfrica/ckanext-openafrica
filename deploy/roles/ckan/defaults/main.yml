@@ -10,6 +10,8 @@ ckan_user: {
   description: "CKAN User"
 }
 
+celery_user: ubuntu
+log_path: "/var/log/ckan/africaopendata"
 # latest stable ckan version
 ckan_version: "2.3"
 
@@ -70,4 +72,7 @@ ckan_max_image_size: 2
 # CKAN solr URL
 ckan_solr_url: "http://127.0.0.1:8983/solr/ckan_default"
 
+supervisor_services:
+  - ckan_gather_consumer
+  - ckan_fetch_consumer
 # vim: set sw=2 ts=2:
