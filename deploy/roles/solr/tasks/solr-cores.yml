@@ -1,11 +1,11 @@
 ---
 - name: We first delete the core if it exists
   become_user: solr
-  command: /opt/solr/bin/solr delete -c ckan_default
+  command: "{{ solr_install_dir }}/bin/solr delete -c ckan_default"
 
 - name: Experiment in creating a core
   become_user: solr
-  command: /opt/solr/bin/solr create -c ckan_default
+  command: "{{ solr_install_dir }}/bin/solr create -c ckan_default"
  
 - name: Create Solr core data dir
   file: dest={{ solr_var_dir }}/data/{{ item }}/data/index state=directory mode=0755

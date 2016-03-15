@@ -94,6 +94,22 @@
   with_items: "{{ solr_cores }}"
   tags: solr
 
+- name: Copy the schema to managed schema
+  command: /bin/cp -a {{ solr_var_dir }}/data/{{ item }}/conf/schema.xml {{ solr_var_dir }}/data/{{ item }}/conf/managed-schema
+  with_items: "{{ solr_cores }}"
+  tags: solr
+
+- name: Copy the solrschema to the conf
+  template: src="solrconfig.xml" dest="{{ solr_var_dir }}/data/{{ item }}/conf/" owner={{ solr_user.name }} group={{ solr_user.name }} mode=0644
+  notify: restart solr
+  with_items: "{{ solr_cores }}"
+  tags: solr
+
+- name: Restart solr because of its ideosyncrancies
+  sudo: yes
+  service: name=solr state=restarted
+  register: restart
+
 ## TODO: find a way of running paster & make it idempotent - maybe touch a file ??
 - name: Initialize ckan postgresql database
   become_user: "{{ckan_user.name}}"

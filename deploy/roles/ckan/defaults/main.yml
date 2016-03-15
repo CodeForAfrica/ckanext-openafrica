@@ -19,6 +19,9 @@ ckan_src_url: "git+https://github.com/okfn/ckan.git@ckan-{{ ckan_version }}#egg=
 # CKAN default site name
 ckan_site_name: "africaopendata"
 
+# CKAN site_id
+ckan.site_id: africaopendata
+
 # CKAN site URL
 ckan_site_url: "http://{{ ckan_site_name }}"
 
