@@ -2,7 +2,7 @@
   <div class="organization">
     <a href="{{ url }}">
       <!-- WARNING: Inline styling causes cancer -->
-      <div class="image image-circle" style="background-size: contain; background-image: url('{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}')">
+      <div class="image image-circle" style="background-size: contain; background-color: #fff; background-image: url('{{ organization.image_display_url or h.url_for_static('/base/images/placeholder-organization.png') }}')">
       </div>
     </a>
     <div class="organization-info">
