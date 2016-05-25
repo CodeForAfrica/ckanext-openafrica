@@ -9,7 +9,7 @@ ckan_user: {
 }
 
 # CKAN default site name
-ckan_site_name: "africaopendata"
+ckan_site_name: "default"
 
 #default ckan virtualenv path
 ckan_virtualenv: "{{ ckan_user.home_path }}/{{ ckan_site_name }}"

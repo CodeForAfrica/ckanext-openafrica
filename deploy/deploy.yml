@@ -1,7 +1,6 @@
 - name: Deploy the application
-  hosts: tag_role_africaopendata
-  sudo: yes
-  sudo_user: root
+  hosts: tag_Name_openAFRICA_main_4
+  #hosts: tag_openafricastaging_openafricastaging 
   remote_user: ubuntu
   vars:
     - setup_git_repo: yes
