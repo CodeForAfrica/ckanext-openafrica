@@ -31,6 +31,8 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
                     controller='ckanext.openafrica.controller:CustomPageController', action='privacy')
         map.connect('/about/contact-us',
                     controller='ckanext.openafrica.controller:CustomPageController', action='contact')
+        map.connect('/about/suggest-a-dataset',
+                    controller='ckanext.openafrica.controller:CustomPageController', action='suggest_a_dataset')
         return map
 
     def get_helpers(self):

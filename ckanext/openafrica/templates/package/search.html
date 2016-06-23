@@ -1,7 +1,7 @@
 {% extends 'page.html' %}
 {% import 'macros/form.html' as form %}
 
-{% block content %}
+{% block primary_content %}
   <div class="module-content">
     {% block page_primary_action %}
         {% if h.check_access('package_create') %}
