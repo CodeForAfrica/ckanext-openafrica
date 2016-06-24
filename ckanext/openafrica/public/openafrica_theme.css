@@ -626,6 +626,7 @@ div.organization-actions div{
   padding: 8px 12px;
   background-color: #00469E;
   margin-top: 8px;
+  border-radius: 0px;
 }
 
 div.sort-datasets {
@@ -863,12 +864,17 @@ div.sort-datasets a {
     width: 16em;
   }
 }
+.btn, label {
+    font-weight: normal;
+    border-radius: 0px;
+}
 .btn-primary{
     color: #ffffff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     background-color: #283858;
     background-image:none;
     border-radius: 0px !important;
+    font-weight: normal;
 }
 .btn-primary:hover {
     background-color:#187794;
@@ -879,12 +885,23 @@ div.sort-datasets a {
 
 .toolbar .breadcrumb {
   font-size:13px;
+  margin-top: 10px;
 }
 
 .breadcrumb .home .icon-home {
     font-size: 18px;
 }
 
+.toolbar .breadcrumb a {
+  color: #fff;
+  text-shadow: none;
+  font-weight:normal !important;
+}
+
 .search-form h2 {
   font-size:14px;
+}
+
+.media-grid {
+  margin: 0 2px;
 }
