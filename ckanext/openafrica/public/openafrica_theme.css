@@ -145,7 +145,7 @@ width: auto;!important;
 
 .homepage .joined-orgs-msg {
   padding: 50px 0px 50px 0px;
-  color: #70A6C6;
+  color: #fff;
   text-align: center;
   font-weight: 100;
   font-size: 1.2em;
@@ -597,6 +597,7 @@ input.button {
   font-weight: 400;
   font-size: 12px;
   color: #333333;
+  margin-top: 10px;
 }
 
 div.organization-actions {
