@@ -560,9 +560,6 @@ input.button {
 }
 .dataset-item .dataset-content .dataset-heading {
   font-size: 18px;
-  overflow: hidden;
-  position: relative;
-  /**height: 2.6em;**/
 }
 
 .dataset-item .dataset-content .dataset-heading:after {
@@ -694,6 +691,10 @@ div.sort-datasets a {
 [role=main] .primary {
   float:none;
   margin-left:none;
+}
+
+[role=main], .main {
+  background: url(/bg.jpg) repeat center center fixed;
 }
 
 .secondary {
@@ -867,10 +868,23 @@ div.sort-datasets a {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     background-color: #283858;
     background-image:none;
+    border-radius: 0px !important;
 }
 .btn-primary:hover {
     background-color:#187794;
 }
 .label {
   text-shadow:none;
+}
+
+.toolbar .breadcrumb {
+  font-size:13px;
+}
+
+.breadcrumb .home .icon-home {
+    font-size: 18px;
+}
+
+.search-form h2 {
+  font-size:14px;
 }
