@@ -696,7 +696,7 @@ div.sort-datasets a {
 }
 
 [role=main], .main {
-  background: url(/bg.jpg) repeat center center fixed;
+  background-color: #1e2d4a;
 }
 
 .secondary {
