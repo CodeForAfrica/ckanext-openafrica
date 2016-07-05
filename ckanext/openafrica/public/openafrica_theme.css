@@ -688,12 +688,13 @@ div.sort-datasets a {
   margin-bottom: 0px;
 }
 
-.primary{width:1120PX;}
+/**.primary{width:1120px;}**/
+.primary{width:717px;float:right}
 
-[role=main] .primary {
+/**[role=main] .primary {
   float:none;
   margin-left:none;
-}
+}**/
 
 [role=main], .main {
   background-color: #1e2d4a;
