@@ -20,5 +20,3 @@ class CustomPageController(HomeController):
 		return render('home/about/privacy.html')
 	def contact(self):
 		return render('home/about/contact.html')
-	def suggest_a_dataset(self):
-		return render('home/about/suggest_a_dataset.html')
