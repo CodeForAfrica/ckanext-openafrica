@@ -688,8 +688,8 @@ div.sort-datasets a {
   margin-bottom: 0px;
 }
 
-.dataset-primary {width:1120px;}
-.primary{width:717px;float:right}
+.dataset-primary {width:100%;}
+.primary{width:80.8%;float:right;border-left: 1px solid #dddddd;}
 
 [role=main] .dataset-primary  {
   float:none;
@@ -702,14 +702,14 @@ div.sort-datasets a {
 
 .secondary {
     margin-left: 20px;
-    width: 220px;
+    width: 19%;
     margin-left: 0;
     float: left;
 }
 
 @media (min-width: 1200px){
   .container, .navbar-static-top .container, .navbar-fixed-bottom .container {
-    width: 940px;
+    /**width: 940px; **/
   }
 }
 
@@ -745,6 +745,10 @@ div.sort-datasets a {
   .dataset-list .dataset-item {
     width: 200px;
     height: 100px;
+  }
+
+  .dataset-content {
+    height:auto;
   }
 
   .dataset-item .dataset-content div {
