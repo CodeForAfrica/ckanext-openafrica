@@ -145,7 +145,7 @@ width: auto;!important;
 
 .homepage .joined-orgs-msg {
   padding: 50px 0px 50px 0px;
-  color: #70A6C6;
+  color: #fff;
   text-align: center;
   font-weight: 100;
   font-size: 1.2em;
@@ -507,27 +507,26 @@ input.button {
 }
 
 .dataset-list .dataset-item {
-  display: inline-block;
   vertical-align: top;
-  width: 280px;
-  height: 180px;
-  margin: 15px 5px 15px 5px;
   background: #FFFFFF;
   padding: 10px 15px 10px 15px;
-  border-radius: 5px;
-  border: 1px solid #D5D5D5;
-  box-shadow: 0px 2px 0px #5CB3E7;
+  border-bottom: 1px solid #ccc;
   position: relative;
+  min-height:100px;
+  height:auto;
+}
+.dataset-item  {
+  margin-bottom: 0px !important;
 }
 
-.dataset-item .dataset-content div {
+/**.dataset-item .dataset-content div {
   overflow: hidden;
   font-weight: 200;
   font-size: 15px;
   color: #5B5B5B;
   position: relative;
   height: 4.0em;
-}
+}**/
 
 .dataset-item .dataset-content div:after {
   content: "";
@@ -537,7 +536,7 @@ input.button {
   right: 0;
   width: 50%;
   height: 1.3em;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+  /**background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);**/
 }
 
 .dataset-item .dataset-content p {
@@ -560,10 +559,7 @@ input.button {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
 }
 .dataset-item .dataset-content .dataset-heading {
-  font-size: 20px;
-  overflow: hidden;
-  position: relative;
-  height: 2.6em;
+  font-size: 18px;
 }
 
 .dataset-item .dataset-content .dataset-heading:after {
@@ -587,6 +583,21 @@ input.button {
   font-size: 14px;
   font-weight: 200;
   margin-top: 3px;
+  border-radius: 0px;
+}
+
+.dataset-item .dataset-date {
+  font-weight: 400;
+  font-size: 12px;
+  color: #888888;
+  letter-spacing: 0.01em;
+}
+
+.dataset-item .dataset-organization {
+  font-weight: 400;
+  font-size: 12px;
+  color: #333333;
+  margin-top: 10px;
 }
 
 div.organization-actions {
@@ -616,6 +627,7 @@ div.organization-actions div{
   padding: 8px 12px;
   background-color: #00469E;
   margin-top: 8px;
+  border-radius: 0px;
 }
 
 div.sort-datasets {
@@ -676,7 +688,17 @@ div.sort-datasets a {
   margin-bottom: 0px;
 }
 
+.dataset-primary {width:1120px;}
 .primary{width:717px;float:right}
+
+[role=main] .dataset-primary  {
+  float:none;
+  margin-left:none;
+}
+
+[role=main], .main {
+  background-color: #1e2d4a;
+}
 
 .secondary {
     margin-left: 20px;
@@ -843,4 +865,45 @@ div.sort-datasets a {
   #email {
     width: 16em;
   }
+}
+.btn, label {
+    font-weight: normal;
+    border-radius: 0px;
+}
+.btn-primary{
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #283858;
+    background-image:none;
+    border-radius: 0px !important;
+    font-weight: normal;
+}
+.btn-primary:hover {
+    background-color:#187794;
+}
+.label {
+  text-shadow:none;
+}
+
+.toolbar .breadcrumb {
+  font-size:13px;
+  margin-top: 10px;
+}
+
+.breadcrumb .home .icon-home {
+    font-size: 18px;
+}
+
+.toolbar .breadcrumb a {
+  color: #fff;
+  text-shadow: none;
+  font-weight:normal !important;
+}
+
+.search-form h2 {
+  font-size:14px;
+}
+
+.media-grid {
+  margin: 0 2px;
 }

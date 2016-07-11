@@ -1,7 +1,7 @@
-{% extends 'page.html' %}
+{% extends 'dataset-page.html' %}
 {% import 'macros/form.html' as form %}
 
-{% block content %}
+{% block primary_content %}
   <div class="module-content">
     {% block page_primary_action %}
         {% if h.check_access('package_create') %}
@@ -26,6 +26,7 @@
           (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
         %}
         {% snippet 'snippets/search_form.html', type='dataset', query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, facets=facets, show_empty=request.params, error=c.query_error %}
+        <p>{{_('Can\'t find what you are looking for?')}} <a href="/datarequest">{{_('Suggest a dataset')}}.</a></p>
       {% endblock %}
     {% block package_search_result_list %}
       {{ h.snippet('snippets/package_list.html', packages=c.page.items) }}
