@@ -27,6 +27,9 @@
           <ul class="nav">
               <li><a href="/dataset">Datasets</a></li>
               <li><a href="/organization">Organisations</a></li>
+              {% if c.userobj %}
+                <li><a href="/datarequest">{{_('Data Request')}}</a></li>
+              {% endif %}
               <li><a href="/groups">Groups</a></li>
               <li><a href="/about">About</a></li>
           </ul>
