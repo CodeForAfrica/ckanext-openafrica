@@ -28,7 +28,7 @@
               <li><a href="/dataset">Datasets</a></li>
               <li><a href="/organization">Organisations</a></li>
               {% if c.userobj %}
-                {% if h.enable_datarequest() %}
+                {% if h.is_plugin_enabled('datarequests') %}
                   <li><a href="/datarequest">{{_('Data Requests')}}</a></li>
                 {% endif %}
               {% endif %}
