@@ -65,7 +65,7 @@ Contributing to CKAN
 --------------------
 If you have interest in contributing to the development of openAfrica extension, you are welcome. A good starting point
 will be reading the CKAN general [Contributing guide](http://docs.ckan.org/en/ckan-2.7.0/contributing/index.html). Then you can checkout 
-existing [issues](https://github.com/CodeForAfrica/ckanext-openafrica/issues) that are open for contribution.
+existing [issues](https://github.com/CodeForAfrica/ckanext-openafrica/issues) that are open for contribution; new features and issues are welcome.
 To work on any issue, comment on the issue to indicate your interest and the issue will be assigned to you. It is always a good idea to seek
 for clarification (where necessary) on any issue you work on.
 
