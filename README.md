@@ -29,6 +29,10 @@ pip install ckanext-openafrica
 > ```
 > $ pip install -e git+https://github.com/CodeForAfrica/ckanext-openafrica.git#egg=ckanext-openafrica
 > ```
+> **Alternatively**: You can clone this repo (preferrably into the /src directory where you installed CKAN), cd into ckanext-openafrica and run
+> ```
+> $ python setup.py develop
+> ```
 
 Step 3:
 
