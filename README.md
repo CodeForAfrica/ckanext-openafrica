@@ -51,3 +51,30 @@ paster serve --reload /etc/ckan/default/production.ini
 With `--reload`, your server is restarted automatically whenever you make changes in your source code.
 
 If your extension is installed successfully, your page will change to the openAfrica theme.
+
+
+
+Support
+-------
+If you've found a bug/issue in the extension, open a new issue [here](https://github.com/CodeForAfrica/ckanext-openafrica/issues/new)_ (try
+searching first to see if there's already an [issue](https://github.com/CodeForAfrica/ckanext-openafrica/issues) for your bug).
+
+
+
+Contributing to CKAN
+--------------------
+If you have interest in contributing to the development of openAfrica extension, you are welcome. A good starting point
+will be reading the CKAN general [Contributing guide](http://docs.ckan.org/en/ckan-2.7.0/contributing/index.html). Then you can checkout 
+existing [issues](https://github.com/CodeForAfrica/ckanext-openafrica/issues) that are open for contribution.
+To work on any issue, comment on the issue to indicate your interest and the issue will be assigned to you. It is always a good idea to seek
+for clarification (where necessary) on any issue you work on.
+
+Copying and License
+-------------------
+
+This material is copyright (c) 2015-2017 Open Africa.
+
+It is open and licensed under the GNU Affero General Public License (AGPL) v2.0
+whose full text may be found at:
+
+http://www.gnu.org/licenses/gpl-2.0.html
