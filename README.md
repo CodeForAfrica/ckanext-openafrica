@@ -56,7 +56,8 @@ With `--reload`, your server is restarted automatically whenever you make change
 
 If your extension is installed successfully, your page will change to the openAfrica theme.
 
-
+**Note**: This extension, being a thememing extension, may override templates from other extensions. Templates in /ckanext/openafrica/templates 
+may require some modifications to render properly with openAfrica extension.
 
 Support
 -------
@@ -74,7 +75,7 @@ To work on any issue, comment on the issue to indicate your interest and the iss
 for clarification (where necessary) on any issue you work on.
 
 Copying and License
--------------------
+--------------------
 
 This material is copyright (c) 2015-2017 Open Africa.
 
