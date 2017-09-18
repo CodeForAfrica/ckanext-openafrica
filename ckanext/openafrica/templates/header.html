@@ -27,6 +27,11 @@
           <ul class="nav">
               <li><a href="/dataset">Datasets</a></li>
               <li><a href="/organization">Organisations</a></li>
+              {% if c.userobj %}
+                {% if h.is_plugin_enabled('datarequests') %}
+                  <li><a href="/datarequest">{{_('Data Requests')}}</a></li>
+                {% endif %}
+              {% endif %}
               <li><a href="/groups">Groups</a></li>
               <li><a href="/about">About</a></li>
           </ul>
