@@ -79,7 +79,7 @@ for clarification (where necessary) on any issue you work on.
 Copying and License
 --------------------
 
-This material is copyright (c) 2015-2017 Open Africa.
+This material is copyright (c) 2015-2017 Code for Africa.
 
 It is open and licensed under the GNU Affero General Public License (AGPL) v2.0
 whose full text may be found at:
