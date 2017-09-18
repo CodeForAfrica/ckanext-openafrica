@@ -71,8 +71,9 @@ body {
 }
 
 .navbar-fixed-top .container {
-width: auto;!important;
+width: auto !important;
 }
+
 .navbar .nav li.dropdown.open>.dropdown-toggle {
   background-color: #283858;
   color: #ffffff;
@@ -93,7 +94,6 @@ width: auto;!important;
   text-align: center;
   padding: 0px;
   background-color: #121E34;
-  /*we added this*/
   margin: 0px 0 0 0;
 }
 
@@ -135,7 +135,6 @@ width: auto;!important;
   padding: 130px 0px;
   margin: 0px;
   height: auto;
-  /*height: 250px;*/
   background: url(/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -462,7 +461,7 @@ input.button {
 }
 
 .organization .stats {
-  text-align: left;
+  text-align: center;
   display: block;
   margin-top: 20px;
 }
@@ -487,12 +486,11 @@ input.button {
 }
 
 .organization-info h1 {
-  text-align: left;
+  text-align: center;
 }
 
 .organization-info p {
-  text-align: left;
-  width: 600px;
+  text-align: center;
 }
 
 .organization-info a {
@@ -519,15 +517,6 @@ input.button {
   margin-bottom: 0px !important;
 }
 
-/**.dataset-item .dataset-content div {
-  overflow: hidden;
-  font-weight: 200;
-  font-size: 15px;
-  color: #5B5B5B;
-  position: relative;
-  height: 4.0em;
-}**/
-
 .dataset-item .dataset-content div:after {
   content: "";
   text-align: right;
@@ -536,7 +525,6 @@ input.button {
   right: 0;
   width: 50%;
   height: 1.3em;
-  /**background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);**/
 }
 
 .dataset-item .dataset-content p {
@@ -705,12 +693,6 @@ div.sort-datasets a {
     width: 19%;
     margin-left: 0;
     float: left;
-}
-
-@media (min-width: 1200px){
-  .container, .navbar-static-top .container, .navbar-fixed-bottom .container {
-    /**width: 940px; **/
-  }
 }
 
 @media (max-width: 979px) {
@@ -887,6 +869,7 @@ div.sort-datasets a {
 }
 .label {
   text-shadow:none;
+  border-radius: 0px;
 }
 
 .toolbar .breadcrumb {
