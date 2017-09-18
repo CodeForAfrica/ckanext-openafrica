@@ -74,6 +74,8 @@ existing [issues](https://github.com/CodeForAfrica/ckanext-openafrica/issues) th
 To work on any issue, comment on the issue to indicate your interest and the issue will be assigned to you. It is always a good idea to seek
 for clarification (where necessary) on any issue you work on.
 
+**It is important that changes that require some form of configurations should be documented in the README.**
+
 Copying and License
 --------------------
 
