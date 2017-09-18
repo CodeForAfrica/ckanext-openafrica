@@ -461,7 +461,7 @@ input.button {
 }
 
 .organization .stats {
-  text-align: left;
+  text-align: center;
   display: block;
   margin-top: 20px;
 }
@@ -486,12 +486,11 @@ input.button {
 }
 
 .organization-info h1 {
-  text-align: left;
+  text-align: center;
 }
 
 .organization-info p {
-  text-align: left;
-  width: 600px;
+  text-align: center;
 }
 
 .organization-info a {
@@ -870,6 +869,7 @@ div.sort-datasets a {
 }
 .label {
   text-shadow:none;
+  border-radius: 0px;
 }
 
 .toolbar .breadcrumb {

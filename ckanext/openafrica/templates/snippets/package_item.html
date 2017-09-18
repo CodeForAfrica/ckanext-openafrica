@@ -41,6 +41,7 @@ Example:
                 {{ h.link_to(h.truncate(title, truncate_title), h.url_for(controller='package', action='read', id=package.name)) }}
                 <small>{{package.total}}</small>
                 <div class="dataset-date">{{_('Updated')}} {{f_updated_time}} | {{_('Created')}}  {{f_created_time}}</div>
+                {{ h.popular('recent views', package.tracking_summary.recent, min=10) }}
                 {% if package.organization %}
                 <div class="dataset-organization">
                   <a class="org" href="{{ h.url_for(controller='organization', action='read', id=package.organization.name, sort='metadata_modified desc') }}">

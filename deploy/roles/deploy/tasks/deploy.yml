@@ -1,0 +1,7 @@
+---
+- name: get openafrica
+  action: git repo=https://github.com/CodeForAfrica/ckanext-openafrica dest={{ ckan_virtualenv }}/src/ckanext-openafrica version=master
+
+- name: run setup.py develop for openafrica
+  action: command chdir={{ ckan_virtualenv }}/src/ckanext-openafrica/ ../../bin/python setup.py develop
+

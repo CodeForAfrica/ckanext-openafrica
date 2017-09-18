@@ -1,0 +1,15 @@
+
+# ckan user details
+ckan_user: {
+  name: "ckan",
+  system: "yes",
+  home_path: "/usr/lib/ckan",
+  shell: "/sbin/nologin",
+  description: "CKAN User"
+}
+
+# CKAN default site name
+ckan_site_name: "default"
+
+#default ckan virtualenv path
+ckan_virtualenv: "{{ ckan_user.home_path }}/{{ ckan_site_name }}"

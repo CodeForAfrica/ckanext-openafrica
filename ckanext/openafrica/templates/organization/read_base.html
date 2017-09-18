@@ -1,20 +1,24 @@
 {% extends 'page.html' %}
 
 {% block content %}
-  <div class="organization-page module-content">
-    {% block primary_content %}
-    {% endblock %}
-  </div>
-  <div class="organization-page">
-    <div class="package-list">
-      {% block package_list %}
-      {% endblock %}
-      {% block page_pagination %}
-      {% endblock %}
+  <div role="main">
+  <div id="content" class="container">
+      <div class="organization-page module-content">
+        {% block primary_content %}
+        {% endblock %}
+      </div>
+      <div class="organization-page">
+        <div class="package-list">
+          {% block package_list %}
+          {% endblock %}
+          {% block page_pagination %}
+          {% endblock %}
+        </div>
+      </div>
+      <div class="organization-page apps-list" >
+        {% block apps_list %}
+        {% endblock %}
+      </div>
     </div>
-  </div>
-  <div class="organization-page apps-list" >
-    {% block apps_list %}
-    {% endblock %}
   </div>
 {% endblock %}
