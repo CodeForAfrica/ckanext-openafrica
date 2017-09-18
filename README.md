@@ -61,7 +61,7 @@ may require some modifications to render properly with openAfrica extension.
 
 Support
 -------
-If you've found a bug/issue in the extension, open a new issue [here](https://github.com/CodeForAfrica/ckanext-openafrica/issues/new)_ (try
+If you've found a bug/issue in the extension, open a new issue [here](https://github.com/CodeForAfrica/ckanext-openafrica/issues/new) _ (try
 searching first to see if there's already an [issue](https://github.com/CodeForAfrica/ckanext-openafrica/issues) for your bug).
 
 
