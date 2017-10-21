@@ -894,3 +894,7 @@ div.sort-datasets a {
 .media-grid {
   margin: 0 2px;
 }
+
+.flash-messages {
+  margin: 25px 0 -15px 0;
+}
