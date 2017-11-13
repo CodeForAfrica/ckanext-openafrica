@@ -26,32 +26,32 @@ import ckan.plugins.toolkit as toolkit
 
 
 class OpenAfricaPlugin(plugins.SingletonPlugin):
-    u'''OpenAfrica templating plugin done in 2015.
-
-    '''
+    u"""
+    OpenAfrica templating plugin done in 2015.
+    """
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IRoutes, inherit=True)
     plugins.implements(plugins.ITemplateHelpers)
 
     def update_config(self, config):
-        u'''
+        u"""
         Called by load_environment at earliest point when config is
         available to plugins. The config should be updated in place.
 
         :param config: ``config`` object
-        '''
+        """
         toolkit.add_template_directory(config, 'templates')
         toolkit.add_public_directory(config, 'public')
         toolkit.add_resource('fanstatic', 'openafrica')
 
     def before_map(self, map):
-        u'''
+        u"""
         Called before the routes map is generated. ``before_map`` is before any
         other mappings are created so can override all other mappings.
 
         :param map: Routes map object
         :returns: Modified version of the map object
-        '''
+        """
         map.connect('/about/terms-and-conditions',
                     controller='ckanext.openafrica.controller:CustomPageController',
                     action='toc')
@@ -59,7 +59,7 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
                     controller='ckanext.openafrica.controller:CustomPageController',
                     action='accessibility')
         map.connect('/about/code-of-conduct',
-                    controller='ckanext.openafrica.controller:CustomPageController', 
+                    controller='ckanext.openafrica.controller:CustomPageController',
                     action='coc')
         map.connect('/about/moderation-policy',
                     controller='ckanext.openafrica.controller:CustomPageController',
@@ -76,10 +76,13 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
         map.connect('/about/suggest-a-dataset',
                     controller='ckanext.openafrica.controller:CustomPageController',
                     action='suggest_a_dataset')
+        map.connect('/atlas-for-africa',
+                    controller='ckanext.openafrica.controller:CustomPageController',
+                    action='atlas')
         return map
 
     def get_helpers(self):
-        """
+        u"""
         All functions, not starting with __ in the ckanext.openafrica.lib
         module will be loaded and made available as helpers to the
         templates.
@@ -90,4 +93,4 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
         helper_dict = {}
 
         funcs = [o for o in getmembers(helpers, isfunction)]
-        return dict([(f[0],f[1],) for f in funcs if not f[0].startswith('__')])
+        return dict([(f[0], f[1],) for f in funcs if not f[0].startswith('__')])
