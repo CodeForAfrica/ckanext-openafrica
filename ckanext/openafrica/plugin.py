@@ -27,7 +27,7 @@ import ckan.plugins.toolkit as toolkit
 
 class OpenAfricaPlugin(plugins.SingletonPlugin):
     u"""
-    OpenAfrica templating plugin done in 2015.
+    openAFRICA templating plugin.
     """
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IRoutes, inherit=True)
