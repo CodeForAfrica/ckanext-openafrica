@@ -898,3 +898,16 @@ div.sort-datasets a {
 .flash-messages {
   margin: 25px 0 -15px 0;
 }
+
+/* ========================================================================
+   QZ Africa atlas styles
+   ======================================================================== */
+
+.qz-atlas {
+    display: block;
+    background: #000;
+    border: none;
+    height: 100vh;
+    width: 100vw;
+
+}
