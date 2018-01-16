@@ -17,7 +17,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with CKAN openAFRICA Extension. If not, see <http://www.gnu.org/licenses/>.
 
-u'''Defines OpenAfrica plugin
+u'''Defines openAFRICA plugin
 Extends CKAN plugins core which provides plugin services to the CKAN
 '''
 
@@ -26,7 +26,7 @@ import ckan.plugins.toolkit as toolkit
 
 
 class OpenAfricaPlugin(plugins.SingletonPlugin):
-    u'''OpenAfrica templating plugin done in 2015.
+    u'''Theming and some extra controls specific to openAFRICA.
 
     '''
     plugins.implements(plugins.IConfigurer)
@@ -73,9 +73,6 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
         map.connect('/about/contact-us',
                     controller='ckanext.openafrica.controller:CustomPageController',
                     action='contact')
-        map.connect('/about/suggest-a-dataset',
-                    controller='ckanext.openafrica.controller:CustomPageController',
-                    action='suggest_a_dataset')
         return map
 
     def get_helpers(self):
