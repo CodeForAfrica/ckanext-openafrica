@@ -17,9 +17,8 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with CKAN openAFRICA Extension. If not, see <http://www.gnu.org/licenses/>.
 
-from ckan.lib.base import render
-
 from ckan.controllers.home import HomeController
+from ckan.lib.base import render
 
 
 class CustomPageController(HomeController):
@@ -45,3 +44,6 @@ class CustomPageController(HomeController):
 
     def contact(self):
         return render('home/about/contact.html')
+
+    def atlas(self):
+        return render('atlas.html')

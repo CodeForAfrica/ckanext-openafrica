@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{%- block page -%}
+
+  {% block skip %}
+    <div class="hide"><a href="#content">{{ _('Skip to content') }}</a></div>
+  {% endblock %}
+
+  {%- block header %}
+    {% include "header.html" %}
+  {% endblock -%}
+
+  {%- block content %}
+    <iframe src="https://www.theatlas.com/search/Africa" class="qz-atlas" style="display: block; width: 100vw; height: 100vh; margin-top: -100px">
+    Your browser doesn't support iframes
+</iframe>
+  {% endblock -%}
+
+
+  {%- block footer %}
+    {% include "footer.html" %}
+  {% endblock -%}
+{%- endblock -%}
+
+{%- block scripts %}
+    {% resource 'base/main' %}
+    {% resource 'base/ckan' %}
+    {% if g.tracking_enabled %}
+      {% resource 'base/tracking.js' %}
+    {% endif %}
+  {{ super() }}
+{% endblock -%}
+
