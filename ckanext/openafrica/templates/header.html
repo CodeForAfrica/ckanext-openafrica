@@ -1,16 +1,24 @@
 {% ckan_extends %}
 {% block header_wrapper %}
 
+
   <div class="navbar">
     <div class="navbar-inner navbar-fixed-top">
+        <div class="alert alert-info alert-dismissible text-center" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <p>We will be going down for maintenance on 11 March for 1 hour. If you have any questions, reach out to support@openafrica.net.</p>
+          </div>
       <div class="container">
-
         <!-- Be sure to leave the brand out there if you want it shown -->
         {% block header_logo %}
           {% if g.site_logo %}
-            <a class="logo brand" href="{{ h.url('home') }}"><img src="{{ g.site_logo }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+            <a href="{{ h.url('home') }}">
+              <img class="logo brand" src="{{ g.site_logo }}" alt="{{ g.site_title }}" title="{{ g.site_title }}" />
+            </a>
           {% else %}
-            <a class="brand" href="{{ h.url('home') }}"><img src="https://cloud.githubusercontent.com/assets/877919/14067805/7e3ff5ae-f476-11e5-88eb-059d88816232.png" alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+            <a class="brand" href="{{ h.url('home') }}">
+              <img src="https://cloud.githubusercontent.com/assets/877919/14067805/7e3ff5ae-f476-11e5-88eb-059d88816232.png" alt="{{ g.site_title }}" title="{{ g.site_title }}" />
+            </a>
           {% endif %}
         {% endblock %}
 
@@ -59,7 +67,10 @@
             {% endif %}
           </ul>
         </div>
+      
       </div>
     </div>
+
+
   </div>
 {% endblock %}
