@@ -17,7 +17,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with CKAN openAFRICA Extension. If not, see <http://www.gnu.org/licenses/>.
 
-u'''Defines OpenAfrica plugin
+u'''Defines openAFRICA plugin
 Extends CKAN plugins core which provides plugin services to the CKAN
 '''
 

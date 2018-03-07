@@ -24,7 +24,6 @@ from ckan.lib.base import render
 class CustomPageController(HomeController):
     """This controller is used to extend some of the static pages with
     the accompanying URL routing associated with it."""
-
     def toc(self):
         return render('home/about/toc.html')
 
