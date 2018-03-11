@@ -93,6 +93,10 @@ body {
     border-radius: 0;
 }
 
+.alert-maintenance p {
+    text-shadow: none;
+}
+
 /* Index search snippet */
 
 .homepage {
