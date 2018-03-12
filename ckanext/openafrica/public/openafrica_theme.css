@@ -100,6 +100,7 @@ body {
 .navbar .container {
     margin-left: 0;
     margin-right: 0;
+    width: 100%;
 }
 
 /* Index search snippet */
