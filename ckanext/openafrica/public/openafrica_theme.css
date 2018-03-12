@@ -31,7 +31,7 @@ body {
     margin: 0px;
     font-weight: 200;
     font-size: 15px;
-    padding-bottom: 60px;
+    /*padding-bottom: 60px;*/
     /*This was to allow the main to flow down and show the breadcrumbs*/
 }
 
@@ -95,6 +95,11 @@ body {
 
 .alert-maintenance p {
     text-shadow: none;
+}
+
+.navbar .container {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* Index search snippet */
