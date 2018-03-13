@@ -25,6 +25,8 @@ body {
   border: none;
   background: #283858;
   border-radius: 0px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .navbar {
@@ -910,4 +912,20 @@ div.sort-datasets a {
     height: 100vh;
     width: 100vw;
 
+}
+
+/* ========================================================================
+   Maintenance alert
+   ======================================================================== */
+
+.alert {
+    margin-bottom: 0px;
+    text-shadow: none;
+    background-color: #ff9200;
+    color: #FFFFFF;
+    border-color: transparent;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
 }
