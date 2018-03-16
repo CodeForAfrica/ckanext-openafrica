@@ -89,12 +89,8 @@
   </div>
 </div>
 
-<script
-    src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
 <script>
-
-    $(function () {
+    window.onload = function () {
         // get the height of the alertbox
         var alert_height = $('#alert-box').outerHeight();
         // offset the main content
@@ -105,7 +101,7 @@
             $('#content-offset-div').css('display', 'none');
         });
 
-    });
+    };
 
 </script>
 {% endblock %}
