@@ -90,18 +90,29 @@
 </div>
 
 <script>
-    window.onload = function () {
-        // get the height of the alertbox
-        var alert_height = $('#alert-box').outerHeight();
-        // offset the main content
-        $('#content-offset-div').css('margin-top', alert_height);
+    var show_alert = function () {
+        if ($(window).width() > 979) {
+          // get the height of the alertbox
+          var alert_height = $('#alert-box').outerHeight();
+          // offset the main content
+          $('#content-offset-div').css('margin-top', alert_height);
 
-        $('#alert-dismiss').click(function () {
-            // remove offset
-            $('#content-offset-div').css('display', 'none');
-        });
+          $('#alert-dismiss').click(function () {
+              // remove offset
+              $('#content-offset-div').css('display', 'none');
+          }); }
 
     };
+    window.onload = function () {
+        console.log('Window load');
+        show_alert();
+
+        $(window).resize(function() {
+        console.log('Window resize');
+        show_alert()
+    });
+    };
+
 
 </script>
 {% endblock %}

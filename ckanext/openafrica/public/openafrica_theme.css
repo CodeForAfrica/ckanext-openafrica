@@ -949,3 +949,28 @@ div.sort-datasets a {
 .margin-top-50 {
     margin-top: 50px;
 }
+
+@media (max-width: 979px) {
+    .navbar {
+        padding-bottom: 0;
+    }
+
+    .navbar .container {
+        position: relative;
+    }
+
+    .content-offset-div {
+        display: none !important;
+    }
+
+    .navbar .btn-navbar {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+
+    [role=main], .main {
+        margin-top: -20px;
+    }
+}
+
