@@ -972,5 +972,9 @@ div.sort-datasets a {
     [role=main], .main {
         margin-top: -20px;
     }
+
+    .homepage {
+      margin-top: -20px;
+    }
 }
 
