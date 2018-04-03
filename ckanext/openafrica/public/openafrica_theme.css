@@ -588,6 +588,7 @@ input.button {
   margin-top: 10px;
 }
 
+
 div.organization-actions {
   padding-right: 110px;
   line-height: 0px;
@@ -725,7 +726,7 @@ div.sort-datasets a {
   }
 
   .dataset-list .dataset-item {
-    width: 200px;
+    width: 100%;
     height: 100px;
   }
 
@@ -733,8 +734,17 @@ div.sort-datasets a {
     height:auto;
   }
 
+  .dataset-content .header-meta {
+    width: 40%;
+  }
+
+  .dataset-content .desc-resources {
+    width:46%;
+    padding-left:10px;
+  }
+
   .dataset-item .dataset-content div {
-    display: none;
+    display: block;
   }
 
   .dataset-item .dataset-content .dataset-heading {
@@ -789,8 +799,8 @@ div.sort-datasets a {
 }
 
   .media-item {
-        position: relative;!important;
-        width: 179px;!important;
+        position: relative !important;
+        width: 179px !important;
         overflow-wrap: break-word;
   }
 @media (max-width: 767px) {
@@ -852,6 +862,22 @@ div.sort-datasets a {
     width: 16em;
   }
 }
+
+@media (max-width: 470px) {
+    .dataset-notes {
+        display: none !important;
+    }
+
+    .dataset-content .header-meta {
+        width: 100%;
+      }
+    
+      .dataset-content .desc-resources {
+        width: 100%;
+        padding-left: 10px;
+      }
+
+}
 .btn, label {
     font-weight: normal;
     border-radius: 0px;
@@ -897,6 +923,10 @@ div.sort-datasets a {
 
 .flash-messages {
   margin: 25px 0 -15px 0;
+}
+
+.cvframe {
+    height: 700px;
 }
 
 /* ========================================================================
