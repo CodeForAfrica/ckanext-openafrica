@@ -588,7 +588,6 @@ input.button {
   margin-top: 10px;
 }
 
-
 div.organization-actions {
   padding-right: 110px;
   line-height: 0px;
@@ -696,6 +695,19 @@ div.sort-datasets a {
     float: left;
 }
 
+.dataset-meta {
+  width: 46%;
+  padding-left: 10px;
+}
+
+.dataset-desc {
+  width: 40%;
+}
+
+.dataset-desc .dataset-resource-list {
+  display: none;
+}
+
 @media (max-width: 979px) {
   .nav-collapse .nav>li>a:hover, .nav-collapse .nav>li>a:focus,
   .nav-collapse .dropdown-menu a:hover, .nav-collapse .dropdown-menu a:focus {
@@ -726,21 +738,12 @@ div.sort-datasets a {
   }
 
   .dataset-list .dataset-item {
-    width: 100%;
-    height: 100px;
+    width: 100%px;
+    height: auto;
   }
 
   .dataset-content {
     height:auto;
-  }
-
-  .dataset-content .header-meta {
-    width: 40%;
-  }
-
-  .dataset-content .desc-resources {
-    width:46%;
-    padding-left:10px;
   }
 
   .dataset-item .dataset-content div {
@@ -756,6 +759,8 @@ div.sort-datasets a {
     padding: 3px 15px;
     font-size: 12px;
   }
+
+
 
   .organization-info h1 {
     text-align: center;
@@ -803,6 +808,7 @@ div.sort-datasets a {
         width: 179px !important;
         overflow-wrap: break-word;
   }
+
 @media (max-width: 767px) {
   body {
     padding: 0;
@@ -863,20 +869,14 @@ div.sort-datasets a {
   }
 }
 
-@media (max-width: 470px) {
-    .dataset-notes {
-        display: none !important;
-    }
+@media (max-width: 540px) {
+  .dataset-meta {
+    display: none !important;
+  }
 
-    .dataset-content .header-meta {
-        width: 100%;
-      }
-    
-      .dataset-content .desc-resources {
-        width: 100%;
-        padding-left: 10px;
-      }
-
+  .dataset-desc {
+    width: 100%;
+}
 }
 .btn, label {
     font-weight: normal;
@@ -925,10 +925,6 @@ div.sort-datasets a {
   margin: 25px 0 -15px 0;
 }
 
-.cvframe {
-    height: 700px;
-}
-
 /* ========================================================================
    QZ Africa atlas styles
    ======================================================================== */
@@ -941,3 +937,11 @@ div.sort-datasets a {
     width: 100vw;
 
 }
+
+/* ========================================================================
+   Embed iframe
+   ======================================================================== */
+
+   #cvframe {
+     height: 700px;
+   }
