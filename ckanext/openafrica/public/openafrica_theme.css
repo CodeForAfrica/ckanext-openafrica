@@ -804,7 +804,7 @@ div.sort-datasets a {
 }
 
   .media-item {
-        position: relative !important;
+        /* position: relative !important; */
         width: 179px !important;
         overflow-wrap: break-word;
   }
