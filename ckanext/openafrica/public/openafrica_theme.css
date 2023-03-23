@@ -938,6 +938,12 @@ div.sort-datasets a {
 
 }
 
+div.c_pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+
+
 /* ========================================================================
    Embed iframe
    ======================================================================== */
@@ -945,3 +951,4 @@ div.sort-datasets a {
    #cvframe {
      height: 700px;
    }
+
