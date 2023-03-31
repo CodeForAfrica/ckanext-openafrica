@@ -23,7 +23,7 @@ body {
 
 .navbar-inner {
   border: none;
-  background: #283858;
+  background: #151F31;
   border-radius: 0px;
 }
 
@@ -328,33 +328,53 @@ a.button-bordered {
 /* Footer */
 
 .site-footer {
-  background: #EEEEEE;
-  color: #2C2C2C;
+  background: #151F31;
+  color: #fff;
   font-weight: 200;
   font-size: 1.1em;
   padding: 50px;
 }
 
 .site-footer a {
-  color: #2C2C2C;
+  color: #fff;
 }
 
 .site-footer h5 {
   font-weight: 200;
-  color: #565656;
+  color: #fff;
 }
 
-.site-footer .logo {
+/* .site-footer .logo {
   text-align: right;
   vertical-align: top;
+} */
+.site-footer .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.site-footer .logo .copyright{
+  padding: 2rem 0;
 }
 
 .site-footer label {
-  color: #2C2C2C;
+  color: #fff;
   font-weight: 200;
   font-size: 1.1em;
 }
+
 .footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.footer-links .links {
+  align-self: center;
+}
+/* .footer-links {
   width: auto;
 }
 
@@ -367,7 +387,7 @@ a.button-bordered {
 .footer-links .logo, .footer-links .all-links {
   display: inline-block;
   margin: 0px 30px 0px 30px;
-}
+} */
 
 
 /* Subscription*/
