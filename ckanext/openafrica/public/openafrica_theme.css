@@ -374,6 +374,13 @@ a.button-bordered {
 .footer-links .links {
   align-self: center;
 }
+
+.footer-links .language-settings ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 /* .footer-links {
   width: auto;
 }
@@ -706,6 +713,7 @@ div.sort-datasets a {
 
 [role=main], .main {
   background-color: #1e2d4a;
+  padding-bottom: 0;
 }
 
 .secondary {
@@ -841,10 +849,28 @@ div.sort-datasets a {
   .site-footer {
     padding: 5px;
   }
+  .site-footer .container {
+    padding-top: 20px;
+  }
 
-  .footer-links .logo,
+  /* .footer-links .logo,
   .footer-links .all-links {
     margin: 0px;
+  } */
+  .footer-links{
+    flex-direction: column;
+  }
+  .footer-links .language-settings ul{
+    align-items: center;
+    margin-top: 20px;
+  }
+  .footer-links .language-settings ul li form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links .language-settings ul li form label {
+    margin-right: 60px;
   }
 
   .organization-info p {
