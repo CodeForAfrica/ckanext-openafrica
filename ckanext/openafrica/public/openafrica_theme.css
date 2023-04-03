@@ -1073,5 +1073,11 @@ div.sort-datasets a {
       border-radius: 0 4px 4px 0;
     }
 
+  .navbar .pull-right > li > .dropdown-menu,
+  .navbar .nav > li > .dropdown-menu.pull-right {
+    left: auto;
+    right: 0;
+    display: block;
+  }
 
    
