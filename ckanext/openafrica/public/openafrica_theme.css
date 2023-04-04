@@ -382,7 +382,7 @@ a.button-bordered {
 .footer-about{
   margin: 50px 0;
 }
-.footer-links .logo-section .logo .social-links {
+.logo .social-links {
   display: flex;
   justify-content: space-between;
 }
@@ -392,7 +392,6 @@ a.button-bordered {
 }
 
 .footer-links .links {
-  align-self: center;
   display: flex;
   justify-content: center;
 }
@@ -400,14 +399,24 @@ a.button-bordered {
 .links ul {
   list-style: none;
 }
+.links ul li {
+ font-weight: bold;
+ padding: 10px 0;
+}
 
 .links.contact-list{
+  flex-direction: column;
+}
+.links.contact-list div{
+  display: flex;
+  justify-content: end;
   flex-direction: column;
 }
 
 .footer-links .subscription {
   display: flex;
   flex-direction: column;
+  text-align: start;
 }
 .footer-links .subscription .title {
   font-size: 1.4rem;
@@ -431,27 +440,9 @@ a.button-bordered {
   justify-content: center;
   align-items: flex-start;
 }
-/* .footer-links {
-  width: auto;
-}
-
-.footer-links ul {
-    float: left;
-    margin-left: 20px;
-    width: 220px;
-}
-
-.footer-links .logo, .footer-links .all-links {
-  display: inline-block;
-  margin: 0px 30px 0px 30px;
-} */
-
-
-/* Subscription*/
 
 .subscription {
 text-align: center;
-margin: 60px 10px;
 }
 
 #msg {
