@@ -1090,20 +1090,20 @@ div.sort-datasets a {
      height: 700px;
    }
 
-   .dataset-primary .module-content .pagination-wrapper  {
+   .pagination-wrapper  {
     margin: 20px 0;
     text-align: center;
    }
-   .dataset-primary .module-content .pagination-wrapper .pagination {
+   .pagination-wrapper .pagination {
     display: flex;
     margin: 0 0 10px 25px;
     list-style: none;
     justify-content: center;
    }
-   .dataset-primary .module-content .pagination-wrapper .pagination li {
+   .pagination-wrapper .pagination li {
 
    }
-   .dataset-primary .module-content .pagination-wrapper .pagination li a {
+   .pagination-wrapper .pagination li a {
     float: left;
     padding: 4px 12px;
     line-height: 20px;
@@ -1113,25 +1113,25 @@ div.sort-datasets a {
     border-left-width: 0;
    }
 
-   .dataset-primary .module-content .pagination-wrapper .pagination li.active a {
+   .pagination-wrapper .pagination li.active a {
     color: #999999;
     cursor: default;
    }
 
-   .dataset-primary .module-content .pagination-wrapper .pagination li.disabled a {
+   .pagination-wrapper .pagination li.disabled a {
     color: #999999;
     background-color: transparent;
     cursor: default;
    }
 
    /* a first-child */
-    .dataset-primary .module-content .pagination-wrapper .pagination li:first-child a {
+    .pagination-wrapper .pagination li:first-child a {
       border-left-width: 1px;
       border-radius: 4px 0 0 4px;
     }
 
     /* a last-child */
-    .dataset-primary .module-content .pagination-wrapper .pagination li:last-child a {
+    .pagination-wrapper .pagination li:last-child a {
       border-radius: 0 4px 4px 0;
     }
 
