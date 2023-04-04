@@ -382,9 +382,12 @@ a.button-bordered {
 .footer-about{
   margin: 50px 0;
 }
-.logo .social-links {
+.social-links {
   display: flex;
   justify-content: space-between;
+}
+.social-links a {
+  margin: 0 10px;
 }
 
 .social-links a img {
@@ -904,6 +907,20 @@ div.sort-datasets a {
   .footer-links .language-settings ul{
     align-items: center;
     margin-top: 20px;
+  }
+  .footer-links .links{
+    padding-top: 20px;
+  }
+
+  .links.contact-list{
+    align-items: center;
+  }
+  .links.contact-list ul{
+   margin: 0;
+  }
+
+  .social-links {
+    justify-content: center;
   }
   .footer-links .language-settings ul li form {
     display: flex;
