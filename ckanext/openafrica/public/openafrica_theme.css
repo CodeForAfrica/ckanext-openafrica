@@ -112,6 +112,9 @@ width: auto !important;
   line-height: 1.0em;
 }
 
+.search-form .search-input.search-giant button {
+  margin-top: -14px;
+}
 .homepage .search-giant {
   display: inline-block;
 }
@@ -367,14 +370,61 @@ a.button-bordered {
 .footer-links {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+}
+.footer-links div{
+  flex:1
+}
 
+.logo-section .logo img{
+  width: 300px;
+  height: auto;
+}
+.footer-about{
+  margin: 50px 0;
+}
+.footer-links .logo-section .logo .social-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-links a img {
+  width: 30px;
 }
 
 .footer-links .links {
   align-self: center;
+  display: flex;
+  justify-content: center;
 }
 
+.links ul {
+  list-style: none;
+}
+
+.links.contact-list{
+  flex-direction: column;
+}
+
+.footer-links .subscription {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links .subscription .title {
+  font-size: 1.4rem;
+}
+.subscription form .input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.subscription form .input-group input {
+  padding: 10px;
+  width: 100%;
+}
+.subscription form a {
+  text-decoration: underline;
+}
 .footer-links .language-settings ul{
   display: flex;
   flex-direction: column;
@@ -905,9 +955,13 @@ div.sort-datasets a {
     font-size: 14px;
   }
 
-  .search-form .search-input.search-giant button i {
+  /* .search-form .search-input.search-giant button i {
     font-size: 22px;
     width: 22px;
+  } */
+
+  .search-form .search-input.search-giant button {
+    margin-top: -14px;
   }
 
   #email {
