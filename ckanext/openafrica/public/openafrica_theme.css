@@ -410,6 +410,7 @@ margin-left: 20px;
 
 .footer-links .links {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
@@ -931,6 +932,8 @@ div.sort-datasets a {
   }
   .footer-links .links{
     padding-top: 20px;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   .links.contact-list{
@@ -950,6 +953,18 @@ div.sort-datasets a {
   }
   .footer-links .language-settings ul li form label {
     margin-right: 60px;
+  }
+  .logo-section .logo img{
+    align-self: center;
+  }
+  .logo-section .footer-about{
+    text-align: center;
+  }
+  .footer-links .subscription{
+    text-align: center;
+  }
+  .subscription form .input-group{
+    text-align: center;
   }
 
   .organization-info p {
