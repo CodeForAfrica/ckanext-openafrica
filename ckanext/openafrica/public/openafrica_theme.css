@@ -70,9 +70,9 @@ body {
   vertical-align: middle;
 }
 
-.navbar-fixed-top .container {
+/* .navbar-fixed-top .container {
 width: auto !important;
-}
+} */
 
 .navbar .nav li.dropdown.open>.dropdown-toggle {
   background-color: #283858;
@@ -445,7 +445,11 @@ a.button-bordered {
 }
 
 .subscription {
-text-align: center;
+  text-align: center;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #msg {
