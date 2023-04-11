@@ -414,6 +414,10 @@ margin-left: 20px;
   justify-content: center;
 }
 
+.links .about-links {
+  padding-left: 20px;
+}
+
 .links ul {
   list-style: none;
   margin-left: 0;

@@ -48,19 +48,22 @@
     <div class="contact-links">
       <ul>
         <li>
-          <a href="/about/contact-us">{{ _('Contact') }}</a>
-        </li>
-        <li>
           <a href="/about/faq">{{ _('FAQ') }}</a>
         </li>
-        <li>
+        <!-- <li>
           <a href="https://ckan.org/" target="_blank" rel="noopener">
             {{ _('CKAN') }}
           </a>
-        </li>
+        </li> -->
         {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
         <li>
           <a href="{{ api_url }}">{{ _('CKAN API') }}</a>
+        </li>
+        <li>
+          <a href="/about/contact-us">{{ _('DataLab Helpdesk') }}</a>
+        </li>
+        <li>
+          <a href="/about/partnerships">{{ _('Partnerships') }}</a>
         </li>
       </ul>
       <div>
@@ -81,17 +84,20 @@
           <a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About {0}').format(g.site_title) }}</a>
         </li>
         <li>
-          <a href="/about/terms-and-conditions">{{ _('Terms and Conditions') }}</a>
-        </li>
-        <li>
-          <a href="/about/accessibility">{{ _('Accessibility') }}</a>
+          <a href="/about/contact-us">{{ _('Contact') }}</a>
         </li>
         <li>
           <a href="/about/code-of-conduct">{{ _('Code of conduct') }}</a>
         </li>
         <li>
-          <a href="/about/moderation-policy">{{ _('Moderation policy') }}</a>
+          <a href="/about/terms-and-conditions">{{ _('Terms & Conditions') }}</a>
         </li>
+        <!-- <li>
+          <a href="/about/accessibility">{{ _('Accessibility') }}</a>
+        </li>
+        <li>
+          <a href="/about/moderation-policy">{{ _('Moderation policy') }}</a>
+        </li> -->
       </ul>
     </div>
   </div>
