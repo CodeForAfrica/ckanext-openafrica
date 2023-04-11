@@ -39,6 +39,9 @@ body {
   margin-bottom: 17px;
   float: none;
 }
+.navbar .nav.pull-right {
+  margin-right: 100px;
+}
 
 .navbar .btn-navbar {
   position: absolute;
@@ -70,9 +73,9 @@ body {
   vertical-align: middle;
 }
 
-/* .navbar-fixed-top .container {
+.navbar-fixed-top .container {
 width: auto !important;
-} */
+}
 
 .navbar .nav li.dropdown.open>.dropdown-toggle {
   background-color: #283858;
@@ -432,7 +435,7 @@ a.button-bordered {
 
 .subscription form .input-group input {
   padding: 10px;
-  width: 100%;
+  width: auto;
 }
 .subscription form a {
   text-decoration: underline;
