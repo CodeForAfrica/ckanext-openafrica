@@ -374,23 +374,34 @@ a.button-bordered {
   display: flex;
   justify-content: space-between;
 }
-.footer-links div{
-  flex:1
+
+.footer-links .logo-section{
+  flex:2;
+  margin-right: 30px;
 }
 
 .logo-section .logo img{
   width: 300px;
   height: auto;
+  align-self: self-start;
 }
 .footer-about{
   margin: 50px 0;
 }
 .social-links {
   display: flex;
-  justify-content: space-between;
+}
+.social-links p {
+  font-weight: bold;
+  margin: 0;
+  align-self: center;
+}
+.social-links .icons{
+display: flex;
+margin-left: 20px;
 }
 .social-links a {
-  margin: 0 10px;
+  padding: 0 5px;
 }
 
 .social-links a img {
@@ -410,19 +421,22 @@ a.button-bordered {
  padding: 10px 0;
 }
 
-.links.contact-list{
-  flex-direction: column;
-}
-.links.contact-list div{
+ .contact-links{
   display: flex;
-  justify-content: end;
   flex-direction: column;
+  justify-content: space-between;
+}
+.contact-links div ul{
+  margin-bottom: 0;
 }
 
 .footer-links .subscription {
   display: flex;
+  justify-content: start;
   flex-direction: column;
   text-align: start;
+  flex: 1;
+  margin-left: 30px;
 }
 .footer-links .subscription .title {
   font-size: 1.4rem;
