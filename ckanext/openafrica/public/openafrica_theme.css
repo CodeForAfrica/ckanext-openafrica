@@ -421,6 +421,7 @@ margin-left: 20px;
 .links ul {
   list-style: none;
   margin-left: 0;
+  text-align: center;
 }
 .links ul li {
  font-weight: bold;
