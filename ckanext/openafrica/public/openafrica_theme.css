@@ -421,6 +421,7 @@ margin-left: 20px;
 .links ul {
   list-style: none;
   margin-left: 0;
+  text-align: left;
 }
 .links ul li {
  font-weight: bold;
@@ -939,6 +940,9 @@ div.sort-datasets a {
     padding-top: 20px;
     flex-direction: column-reverse;
     align-items: center;
+  }
+  .links ul {
+    text-align: center;
   }
 
   .links.contact-list{
