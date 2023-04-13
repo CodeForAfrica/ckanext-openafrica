@@ -115,9 +115,9 @@ width: auto !important;
   line-height: 1.0em;
 }
 
-.search-form .search-input.search-giant button {
+/* .search-form .search-input.search-giant button {
   margin-top: -14px;
-}
+} */
 .homepage .search-giant {
   display: inline-block;
 }
