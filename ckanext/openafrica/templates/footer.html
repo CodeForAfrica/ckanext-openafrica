@@ -1,41 +1,137 @@
 {% ckan_extends %}
 {% block footer_content %}
-  <div class="footer-links">
+<div class="footer-links">
+  <div class="logo-section">
     <div class="logo">
-      <a href="https://codeforafrica.org" target="_blank" rel="noopener">
-        <img src="/images/logos/c4a.png" />
-      </a>
-      <h5>2013 - {{h.current_year()}} Code for Africa</h5>
+      <img src="/images/logos/CfAlogoBW.png" />
     </div>
-    <div class="all-links">
-      <ul class="unstyled">
-              <li><a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About {0}').format(g.site_title) }}</a></li>
-              <li><a href="/about/terms-and-conditions">{{ _('Terms and Conditions') }}</a></li>
-              <li><a href="/about/accessibility">{{ _('Accessibility') }}</a></li>
-              <li><a href="/about/code-of-conduct">{{ _('Code of conduct') }}</a></li>
-              <li><a href="/about/moderation-policy">{{ _('Moderation policy') }}</a></li>
-              <li><a href="/about/faq">{{ _('FAQ') }}</a></li>
-              <li><a href="/about/privacy">{{ _('Privacy') }}</a></li>
-              <li><a href="/about/contact-us">{{ _('Contact us') }}</a></li>
-        {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
-        <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
-      </ul>
+    <div class="footer-about">
+      <p>
+        This site is part of a network of digital infrastructure built by Code for Africa (CfA) as a free open source
+        software for use by human rights defending organisations. Reuse it to empower your own communities.
+      </p>
+      <p>
+        CfA is Africa's largest non-profit civic technology and open data catalyst, with labs across the continent. CfA
+        content on this site is released under a Creative Commons 4.0 International License. Refer to our attributions
+        page for attributions of other work on the site.
+      </p>
+    </div>
+    <div class="social-links">
+      <p>
+        Stay in touch:
+      </p>
+      <div class="icons">
+        <a href="https://twitter.com/codeforafrica" target="_blank" rel="noopener">
+          <img src="/icons/twitter.svg" alt="Twitter" />
+        </a>
+        <a href="https://codeforafrica.slack.com" target="_blank" rel="noopener">
+          <img src="/icons/slack.svg" alt="Slack" />
+        </a>
+        <a href="https://www.linkedin.com/company/code-for-africa" target="_blank" rel="noopener">
+          <img src="/icons/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://www.facebook.com/codeforafrica" target="_blank" rel="noopener">
+          <img src="/icons/facebook.svg" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/codeforafrica/" target="_blank" rel="noopener">
+          <img src="/icons/instagram.svg" alt="Instagram" />
+        </a>
+        <!-- github -->
+        <a href="https://www.githob.com/codeforafrics" target="_blank" rel="noopener">
+          <img src="/icons/github.svg" alt="Github" />
+        </a>
+      </div>
+    </div>
 
-      <ul class="unstyled">
-        <li>{% snippet "snippets/language_selector.html" %}</li>
-        <li><a href="http://ckan.org">Powered by CKAN</a></li>
+  </div>
+  <div class="links">
+    <div class="contact-links">
+      <ul>
+        <li>
+          <a href="/about/faq">{{ _('FAQ') }}</a>
+        </li>
+        <!-- <li>
+          <a href="https://ckan.org/" target="_blank" rel="noopener">
+            {{ _('CKAN') }}
+          </a>
+        </li> -->
+        {% set api_url = 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version) %}
+        <li>
+          <a href="{{ api_url }}">{{ _('CKAN API') }}</a>
+        </li>
+        <li>
+          <a href="/about/contact-us">{{ _('DataLab Helpdesk') }}</a>
+        </li>
+        <li>
+          <a href="/about/partnerships">{{ _('Partnerships') }}</a>
+        </li>
+      </ul>
+      <div>
+        <ul>
+          <li>
+            <a href="/about/imprint">{{ _('Imprint') }}</a>
+          </li>
+          <li>
+            <!-- privacy -->
+            <a href="/about/privacy">{{ _('Privacy policy') }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-links">
+      <ul>
+        <li>
+          <a href="{{ h.url_for(controller='home', action='about') }}">{{ _('About {0}').format(g.site_title) }}</a>
+        </li>
+        <li>
+          <a href="/about/contact-us">{{ _('Contact') }}</a>
+        </li>
+        <li>
+          <a href="/about/code-of-conduct">{{ _('Code of conduct') }}</a>
+        </li>
+        <li>
+          <a href="/about/terms-and-conditions">{{ _('Terms & Conditions') }}</a>
+        </li>
+        <!-- <li>
+          <a href="/about/accessibility">{{ _('Accessibility') }}</a>
+        </li>
+        <li>
+          <a href="/about/moderation-policy">{{ _('Moderation policy') }}</a>
+        </li> -->
       </ul>
     </div>
   </div>
+  <div class="subscription">
+    <h5 class="title">
+      Subscribe to our newsletter
+    </h5>
+    <p>
+      We will not spam or share your email with third parties.
+    </p>
+    <form action="//codeforafrica.us6.list-manage.com/subscribe/post?u=65e5825507b3cec760f272e79&amp;id=c2ff751541">
+      <div class="input-group">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Name" />
+      </div>
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email" />
+      </div>
+      <a type="submit">Sign Up</a>
+    </form>
+  </div>
+</div>
 
 {%block google_analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-44795600-4', 'auto');
-      ga('send', 'pageview');
-    </script>
-  {% endblock %}
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-44795600-4', 'auto');
+  ga('send', 'pageview');
+</script>
+{% endblock %}
 {% endblock %}
