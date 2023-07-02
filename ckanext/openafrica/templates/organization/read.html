@@ -45,7 +45,10 @@
 {% endblock %}
 
 {% block page_pagination %}
+<div class="pagination">
   {{ c.page.pager(q=c.q) }}
+</div>
+  
 {% endblock %}
 
 {% block apps_list %}
