@@ -2,3 +2,4 @@
 ckanext_openafrica.egg-info/
 *.swp
 env/*
+build/
