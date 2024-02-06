@@ -23,77 +23,79 @@ Example:
 {% set f_created_time = h.render_datetime(created_time) %}
 
 {% block package_item %}
-  <li class="{{ item_class or "dataset-item" }}">
-    {% block content %}
-      <div class="dataset-content">
-        <div class="pull-left dataset-desc">
-          {% block heading %}
-            <h5 class="dataset-heading">
-              {% block heading_private %}
-                {% if package.private %}
-                  <span class="dataset-private label label-inverse">
-                    <i class="icon-lock"></i>
-                    {{ _('Private') }}
-                  </span>
-                {% endif %}
-              {% endblock %}
-              {% block heading_title %}
-                {{ h.link_to(h.truncate(title, truncate_title), h.url_for(controller='package', action='read', id=package.name)) }}
-                <small>{{package.total}}</small>
-                <div class="dataset-date">{{_('Updated')}} {{f_updated_time}} | {{_('Created')}}  {{f_created_time}}</div>
-                {% if package.organization %}
-                <div class="dataset-organization">
-                  <a class="org" href="{{ h.url_for(controller='organization', action='read', id=package.organization.name, sort='metadata_modified desc') }}">
-                    {{ package.organization.title or package.organization.name }}
-                  </a>
-                </div>
-                {% endif %}
-              {% endblock %}
-              {% block heading_meta %}
-                {% if package.get('state', '').startswith('draft') %}
-                  <span class="label label-info">{{ _('Draft') }}</span>
-                {% elif package.get('state', '').startswith('deleted') %}
-                  <span class="label label-important">{{ _('Deleted') }}</span>
-                {% endif %}
-              {% endblock %}
-            </h5>
-          {% endblock %}
-          {% block banner %}
-            {% if banner %}
-              <span class="banner">{{ _('Popular') }}</span>
-            {% endif %}
-          {% endblock %}
+<li class="{{ item_class or "dataset-item" }}">
+  {% block content %}
+  <div class="dataset-content">
+    <div class="pull-left dataset-desc">
+      {% block heading %}
+      <h5 class="dataset-heading">
+        {% block heading_private %}
+        {% if package.private %}
+        <span class="dataset-private label label-inverse">
+          <i class="icon-lock"></i>
+          {{ _('Private') }}
+        </span>
+        {% endif %}
+        {% endblock %}
+        {% block heading_title %}
+        {{ h.link_to(h.truncate(title, truncate_title), h.url_for(controller='dataset', action='read', id=package.name)) }}
+        <small>{{package.total}}</small>
+        <div class="dataset-date">{{_('Updated')}} {{f_updated_time}} | {{_('Created')}} {{f_created_time}}</div>
+        {% if package.organization %}
+        <div class="dataset-organization">
+          <a class="org"
+            href="{{ h.url_for(controller='organization', action='read', id=package.organization.name, sort='metadata_modified desc') }}">
+            {{ package.organization.title or package.organization.name }}
+          </a>
         </div>
-        <div class="pull-left dataset-meta">
-          <div class="dataset-notes">
-            {% block notes %}
-              {% if notes %}
-                <div>{{ notes|urlize }}</div>
-              {% else %}
-                <p class="empty">{{ _("This dataset has no description") }}</p>
-              {% endif %}
-            {% endblock %}
-          
-          </div>
-          <div class="dataset-resource-list">
-            {% block resources %}
-              {% if package.resources and not hide_resources %}
-                {% block resources_outer %}
-                  <ul class="dataset-resources unstyled">
-                    {% block resources_inner %}
-                      {% for resource in h.dict_list_reduce(package.resources, 'format') %}
-                      <li>
-                        <a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="label" data-format="{{ resource.lower() }}">{{ resource }}</a>
-                      </li>
-                      {% endfor %}
-                    {% endblock %}
-                  </ul>
-                {% endblock %}
-              {% endif %}
-            {% endblock %}
-          </div>
-        </div>
+        {% endif %}
+        {% endblock %}
+        {% block heading_meta %}
+        {% if package.get('state', '').startswith('draft') %}
+        <span class="label label-info">{{ _('Draft') }}</span>
+        {% elif package.get('state', '').startswith('deleted') %}
+        <span class="label label-important">{{ _('Deleted') }}</span>
+        {% endif %}
+        {% endblock %}
+      </h5>
+      {% endblock %}
+      {% block banner %}
+      {% if banner %}
+      <span class="banner">{{ _('Popular') }}</span>
+      {% endif %}
+      {% endblock %}
+    </div>
+    <div class="pull-left dataset-meta">
+      <div class="dataset-notes">
+        {% block notes %}
+        {% if notes %}
+        <div>{{ notes|urlize }}</div>
+        {% else %}
+        <p class="empty">{{ _("This dataset has no description") }}</p>
+        {% endif %}
+        {% endblock %}
+
       </div>
-    {% endblock %}
-  </li>
+      <div class="dataset-resource-list">
+        {% block resources %}
+        {% if package.resources and not hide_resources %}
+        {% block resources_outer %}
+        <ul class="dataset-resources unstyled">
+          {% block resources_inner %}
+          {% for resource in h.dict_list_reduce(package.resources, 'format') %}
+          <li>
+            <a href="{{ h.url_for(controller='dataset', action='read', id=package.name) }}" class="label"
+              data-format="{{ resource.lower() }}">{{ resource }}</a>
+          </li>
+          {% endfor %}
+          {% endblock %}
+        </ul>
+        {% endblock %}
+        {% endif %}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</li>
 {% endblock %}
