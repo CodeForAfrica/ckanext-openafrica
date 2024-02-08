@@ -12,3 +12,8 @@ openafrica-css-theme:
   output: ckanext-openafrica/openafrica-theme.css
   contents:
     - css/openafrica_theme.css
+
+openafrica-main-css:
+  output: ckanext-openafrica/openafrica-main.css
+  contents:
+    - css/main.css
