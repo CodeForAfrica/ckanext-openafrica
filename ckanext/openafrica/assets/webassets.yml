@@ -2,6 +2,7 @@ openafrica-js:
   output: ckanext-openafrica/openafrica.js
   contents:
     - js/datamx_load_apps.js
+    - js/bootstrap.min.js
 
 openafrica-css:
   output: ckanext-openafrica/openafrica.css
