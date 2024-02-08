@@ -114,6 +114,8 @@ body {
   font-size: 24px;
   font-weight: 100;
   line-height: 1em;
+  color: #555;
+  outline: none;
 }
 
 /* .search-form .search-input.search-giant button {
@@ -1233,8 +1235,10 @@ label {
   border: 0;
 }
 
-.nav-collapse.collapse {
-  display: block;
+@media (min-width: 979px) {
+  .nav-collapse.collapse {
+    display: block;
+  }
 }
 
 .navbar .nav > li {
@@ -1247,4 +1251,44 @@ label {
   display: block;
   float: left;
   margin: 17px 10px 0 0;
+}
+
+.wrapper:before {
+  width: 100%;
+}
+
+.navbar .nav > li > a {
+  text-decoration: none;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.navbar .btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #151f31;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  margin: 3px;
+}
+
+@media (min-width: 979px) {
+}
+.navbar .btn-navbar {
+  display: none;
+}
+
+@media (max-width: 979px) {
+  .navbar .btn-navbar {
+    display: block;
+  }
 }
