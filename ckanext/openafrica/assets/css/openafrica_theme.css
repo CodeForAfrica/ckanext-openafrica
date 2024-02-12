@@ -1311,3 +1311,10 @@ label {
 .container {
   padding: 0;
 }
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  color: #fff;
+}
