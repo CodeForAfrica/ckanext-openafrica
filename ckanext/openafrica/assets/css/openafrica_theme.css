@@ -613,8 +613,9 @@ input.button {
   padding: 10px 15px 10px 15px;
   border-bottom: 1px solid #ccc;
   position: relative;
-  min-height: 100px;
+  min-height: 120px;
   height: auto;
+  list-style: none;
 }
 .dataset-item {
   margin-bottom: 0px !important;
@@ -675,6 +676,7 @@ input.button {
 .dataset-item .dataset-resources {
   position: absolute;
   bottom: 10px;
+  padding: 0;
 }
 
 .dataset-item .dataset-resources .label {
@@ -1088,7 +1090,8 @@ label {
   font-weight: normal !important;
 }
 
-.search-form h2 {
+.search-form h2,
+.search-form h1 {
   font-size: 14px;
 }
 
@@ -1252,9 +1255,11 @@ label {
   float: left;
   margin: 17px 10px 0 0;
 }
-
+.wrapper {
+  margin-bottom: 20px;
+}
 .wrapper:before {
-  width: 100%;
+  width: 19%;
 }
 
 .navbar .nav > li > a {
@@ -1291,4 +1296,25 @@ label {
   .navbar .btn-navbar {
     display: block;
   }
+}
+
+.dataset-list.unstyled {
+  padding: 0;
+}
+.page-header.module-content {
+  padding: 20px 40px 40px;
+}
+.module:last-child {
+  margin-bottom: 20px;
+}
+
+.container {
+  padding: 0;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  color: #fff;
 }

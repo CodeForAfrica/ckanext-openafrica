@@ -26,7 +26,7 @@
 
 
       <!-- Everything you want hidden at 940px or less, place within here -->
-      <div class="nav-collapse collapse">
+      <div class="nav-collapse collapse" style="height: auto;">
         <ul class="nav">
           <li><a href="/dataset">Datasets</a></li>
           <li><a href="/organization">Organisations</a></li>
@@ -49,7 +49,7 @@
               <li><a href="{{ h.url_for(controller='admin', action='index') }}">Admin</a></li>
               {% endif %}
               <li>
-                <a href="{{ h.url_for(controller='user', action='dashboard') }}">Control Panel</a>
+                <a href="{{ h.url_for(controller='dashboard', action='index') }}">Control Panel</a>
               </li>
               <li><a href="{{ h.url_for(controller='user', action='edit', id=c.userobj.name) }}">Options</a></li>
               <li><a href="{{ h.url_for('/user/_logout') }}">Logout</a></li>
@@ -66,6 +66,6 @@
 </div>
 {% endblock %}
 {%- block scripts %}
-{% asset 'openafrica/openafrica-js' %}
+{% asset 'openafrica/openafrica-bootstrap-js' %}
 {{ super() }}
 {% endblock -%}

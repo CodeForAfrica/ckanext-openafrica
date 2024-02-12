@@ -4,6 +4,11 @@ openafrica-js:
     - js/datamx_load_apps.js
     - js/bootstrap.min.js
 
+openafrica-bootstrap-js:
+  output: ckanext-openafrica/openafrica_bootstrap.js
+  contents:
+    - js/bootstrap.min.js
+
 openafrica-css:
   output: ckanext-openafrica/openafrica.css
   contents:
