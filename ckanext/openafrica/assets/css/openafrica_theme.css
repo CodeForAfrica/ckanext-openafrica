@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: #151f31;
 }
@@ -384,7 +388,7 @@ a.button-bordered {
 }
 
 .logo-section .logo img {
-  width: 300px;
+  width: auto;
   height: auto;
   align-self: self-start;
 }
@@ -1317,4 +1321,30 @@ label {
 .dropdown-submenu:hover > a,
 .dropdown-submenu:focus > a {
   color: #fff;
+}
+
+.navbar-inner {
+  border: none;
+  background: #151f31;
+  border-radius: 0px;
+  min-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#email.form-control {
+  height: 44px;
+}
+.site-footer .container {
+  position: relative;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+.footer-links .subscription .title {
+  font-size: 1.4rem;
+}
+.footer-links ul {
+  padding: 0;
 }
