@@ -23,7 +23,7 @@ Example:
 {% set f_created_time = h.render_datetime(created_time) %}
 
 {% block package_item %}
-<li class="{{ item_class or "dataset-item" }}">
+<li class="{{ item_class or 'dataset-item' }}">
   {% block content %}
   <div class="dataset-content">
     <div class="pull-left dataset-desc">
