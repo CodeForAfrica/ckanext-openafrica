@@ -1,0 +1,25 @@
+openafrica-js:
+  output: ckanext-openafrica/openafrica.js
+  contents:
+    - js/datamx_load_apps.js
+    - js/bootstrap.min.js
+
+openafrica-bootstrap-js:
+  output: ckanext-openafrica/openafrica_bootstrap.js
+  contents:
+    - js/bootstrap.min.js
+
+openafrica-css:
+  output: ckanext-openafrica/openafrica.css
+  contents:
+    - css/bootstrap-responsive.min.css
+
+openafrica-css-theme:
+  output: ckanext-openafrica/openafrica-theme.css
+  contents:
+    - css/openafrica_theme.css
+
+openafrica-main-css:
+  output: ckanext-openafrica/openafrica-main.css
+  contents:
+    - css/main.css
