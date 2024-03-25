@@ -1,7 +1,7 @@
 from flask import Blueprint
 from ckan.plugins.toolkit import render
 
-openafrica = Blueprint('datapusher', __name__)
+openafrica = Blueprint('openafrica', __name__)
 
 def toc():
     return render('home/about/toc.html')
@@ -33,7 +33,8 @@ rules = [
     ("/about/code-of-conduct", "coc", coc),
     ("/about/moderation-policy", "moderation", moderation),
     ("/about/faq", "faq", faq),
-    ("/about/privacy", "privacy", privacy)
+    ("/about/privacy", "privacy", privacy),
+    ("/about/contact", "contact", contact)
 ]
 
 for rule in rules:

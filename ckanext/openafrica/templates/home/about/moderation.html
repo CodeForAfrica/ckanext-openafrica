@@ -4,7 +4,7 @@
 
 {% block breadcrumb_content %}
 	<li >{% link_for _('About'), controller='home', action='about' %}</li>
-	<li class="active">{% link_for _('Moderation Policy'), controller='ckanext.openafrica.controller:CustomPageController', action='moderation' %}</li>
+	<li class="active">{% link_for _('Moderation Policy'), named_route='openafrica.moderation' %}</li>
 {% endblock %}
 
 {% block primary %}

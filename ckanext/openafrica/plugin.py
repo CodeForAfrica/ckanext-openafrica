@@ -30,8 +30,8 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
     u"""
     openAFRICA templating plugin.
     """
-    plugins.implements(plugins.IConfigurer)
-    plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IConfigurer, inherit=True)
+    plugins.implements(plugins.ITemplateHelpers, inherit=True)
     plugins.implements(plugins.IBlueprint)
 
     def update_config(self, config):
@@ -43,7 +43,6 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
         """
         toolkit.add_template_directory(config, 'templates')
         toolkit.add_public_directory(config, 'public')
-        # toolkit.add_resource('fanstatic', 'openafrica')
         toolkit.add_resource('assets', 'openafrica')
 
     # IBlueprint
