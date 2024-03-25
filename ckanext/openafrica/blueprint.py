@@ -34,7 +34,7 @@ rules = [
     ("/about/moderation-policy", "moderation", moderation),
     ("/about/faq", "faq", faq),
     ("/about/privacy", "privacy", privacy),
-    ("/about/contact", "contact", contact)
+    ("/about/contact-us", "contact", contact)
 ]
 
 for rule in rules:

@@ -48,47 +48,11 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
     # IBlueprint
     def get_blueprint(self):
         """
-        CKAN uses Flask Blueprints in the /ckan/views dir for user and dashboard
+        CKAN uses Flask Blueprints to extend urls
         :return:
         """
         return blueprint.openafrica
 
-    # def before_map(self, map):
-    #     u"""
-    #     Called before the routes map is generated. ``before_map`` is before any
-    #     other mappings are created so can override all other mappings.
-
-    #     :param map: Routes map object
-    #     :returns: Modified version of the map object
-    #     """
-    #     map.connect('/about/terms-and-conditions',
-    #                 controller='ckanext.openafrica.controller:CustomPageController',
-    #                 action='toc')
-    #     map.connect('/about/accessibility',
-    #                 controller='ckanext.openafrica.controller:CustomPageController',
-    #                 action='accessibility')
-    #     map.connect('/about/code-of-conduct',
-    #                 controller='ckanext.openafrica.controller:CustomPageController',
-    #                 action='coc')
-    #     map.connect('/about/moderation-policy',
-    #                 controller='ckanext.openafrica.controller:CustomPageController',
-    #                 action='moderation')
-    #     map.connect('/about/faq',
-    #                 controller='ckanext.openafrica.controller:CustomPageController',
-    #                 action='faq')
-    #     map.connect('/about/privacy',
-    #                 controller='ckanext.openafrica.controller:CustomPageController',
-    #                 action='privacy')
-    #     map.connect('/about/contact-us',
-    #                 controller='ckanext.openafrica.controller:CustomPageController',
-    #                 action='contact')
-    #     map.connect('/about/suggest-a-dataset',
-    #                 controller='ckanext.openafrica.controller:CustomPageController',
-    #                 action='suggest_a_dataset')
-    #     map.connect('/atlas-for-africa',
-    #                 controller='ckanext.openafrica.controller:CustomPageController',
-    #                 action='atlas')
-    #     return map
 
     def get_helpers(self):
         u"""
