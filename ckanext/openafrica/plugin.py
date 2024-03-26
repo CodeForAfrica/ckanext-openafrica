@@ -23,15 +23,16 @@ Extends CKAN plugins core which provides plugin services to the CKAN
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+from . import blueprint
 
 
 class OpenAfricaPlugin(plugins.SingletonPlugin):
     u"""
     openAFRICA templating plugin.
     """
-    plugins.implements(plugins.IConfigurer)
-    plugins.implements(plugins.IRoutes, inherit=True)
-    plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IConfigurer, inherit=True)
+    plugins.implements(plugins.ITemplateHelpers, inherit=True)
+    plugins.implements(plugins.IBlueprint)
 
     def update_config(self, config):
         u"""
@@ -42,45 +43,16 @@ class OpenAfricaPlugin(plugins.SingletonPlugin):
         """
         toolkit.add_template_directory(config, 'templates')
         toolkit.add_public_directory(config, 'public')
-        # toolkit.add_resource('fanstatic', 'openafrica')
         toolkit.add_resource('assets', 'openafrica')
 
-    def before_map(self, map):
-        u"""
-        Called before the routes map is generated. ``before_map`` is before any
-        other mappings are created so can override all other mappings.
-
-        :param map: Routes map object
-        :returns: Modified version of the map object
+    # IBlueprint
+    def get_blueprint(self):
         """
-        map.connect('/about/terms-and-conditions',
-                    controller='ckanext.openafrica.controller:CustomPageController',
-                    action='toc')
-        map.connect('/about/accessibility',
-                    controller='ckanext.openafrica.controller:CustomPageController',
-                    action='accessibility')
-        map.connect('/about/code-of-conduct',
-                    controller='ckanext.openafrica.controller:CustomPageController',
-                    action='coc')
-        map.connect('/about/moderation-policy',
-                    controller='ckanext.openafrica.controller:CustomPageController',
-                    action='moderation')
-        map.connect('/about/faq',
-                    controller='ckanext.openafrica.controller:CustomPageController',
-                    action='faq')
-        map.connect('/about/privacy',
-                    controller='ckanext.openafrica.controller:CustomPageController',
-                    action='privacy')
-        map.connect('/about/contact-us',
-                    controller='ckanext.openafrica.controller:CustomPageController',
-                    action='contact')
-        map.connect('/about/suggest-a-dataset',
-                    controller='ckanext.openafrica.controller:CustomPageController',
-                    action='suggest_a_dataset')
-        map.connect('/atlas-for-africa',
-                    controller='ckanext.openafrica.controller:CustomPageController',
-                    action='atlas')
-        return map
+        CKAN uses Flask Blueprints to extend urls
+        :return:
+        """
+        return blueprint.openafrica
+
 
     def get_helpers(self):
         u"""
