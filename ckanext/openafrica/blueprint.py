@@ -1,40 +1,22 @@
 from flask import Blueprint
 from ckan.plugins.toolkit import render
 
-openafrica = Blueprint('openafrica', __name__)
+openafrica = Blueprint("openafrica", __name__)
 
-def toc():
-    return render('home/about/toc.html')
+def static_path(path):
+    def render_path():
+        return render(path)
 
-def accessibility():
-    return render('home/about/accessibility.html')
-
-def coc():
-    return render('home/about/coc.html')
-
-def moderation():
-    return render('home/about/moderation.html')
-
-def faq():
-    return render('home/about/faq.html')
-
-def privacy():
-    return render('home/about/privacy.html')
-
-def contact():
-    return render('home/about/contact.html')
-
-def atlas():
-    return render('atlas.html')
+    return render_path
 
 rules = [
-    ("/about/terms-and-conditions", "toc", toc),
-    ("/about/accessibility", "accessibility", accessibility),
-    ("/about/code-of-conduct", "coc", coc),
-    ("/about/moderation-policy", "moderation", moderation),
-    ("/about/faq", "faq", faq),
-    ("/about/privacy", "privacy", privacy),
-    ("/about/contact-us", "contact", contact)
+    ("/about/terms-and-conditions", "toc", static_path("home/about/toc.html")),
+    ("/about/accessibility", "accessibility", static_path("home/about/accessibility.html")),
+    ("/about/code-of-conduct", "coc", static_path("home/about/coc.html")),
+    ("/about/moderation-policy", "moderation", static_path("home/about/moderation.html")),
+    ("/about/faq", "faq", static_path("home/about/faq.html")),
+    ("/about/privacy", "privacy", static_path("home/about/privacy.html")),
+    ("/about/contact-us", "contact", static_path("home/about/contact.html"))
 ]
 
 for rule in rules:
