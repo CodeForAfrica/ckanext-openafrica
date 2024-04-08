@@ -34,7 +34,7 @@ body {
   margin: 0px;
   font-weight: 200;
   font-size: 15px;
-  padding-bottom: 60px;
+  padding: 0;
   /*This was to allow the main to flow down and show the breadcrumbs*/
 }
 
@@ -402,6 +402,7 @@ a.button-bordered {
   font-weight: bold;
   margin: 0;
   align-self: center;
+  white-space: nowrap;
 }
 .social-links .icons {
   display: flex;
@@ -1244,13 +1245,15 @@ label {
 
 @media (min-width: 979px) {
   .nav-collapse.collapse {
-    display: block;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
 .navbar .nav > li {
   float: left;
 }
+
 .navbar .nav {
   float: none;
   position: relative;
@@ -1258,6 +1261,18 @@ label {
   display: block;
   float: left;
   margin: 17px 10px 0 0;
+}
+@media (max-width: 979px) {
+  .navbar .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-collapse, .nav-collapse.collapse {
+    overflow: visible;
+  }
+  /* .collapse:not(.show) {
+    display: block;
+  } */
 }
 .wrapper {
   margin-bottom: 20px;
@@ -1347,4 +1362,24 @@ label {
 }
 .footer-links ul {
   padding: 0;
+}
+.homepage .module-search .search-input {
+  display: inline-block;
+}
+.homepage .module-search {
+  border: none;
+}
+.module-content {
+  border-bottom: none;
+}
+.navbar-inner {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.navbar-fixed-top .container {
+  max-width: 100% !important;
 }
