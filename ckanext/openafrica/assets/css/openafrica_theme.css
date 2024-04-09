@@ -870,10 +870,6 @@ div.sort-datasets a {
     height: auto;
   }
 
-  .dataset-content {
-    height: auto;
-  }
-
   .dataset-item .dataset-content div {
     display: block;
   }
@@ -1382,4 +1378,14 @@ label {
 
 .navbar-fixed-top .container {
   max-width: 100% !important;
+}
+
+.dataset-resources li a {
+  background-color: #856A00;
+  color: #ffffff;
+}
+
+.dataset-content {
+  height: auto;
+  display: flex;
 }
