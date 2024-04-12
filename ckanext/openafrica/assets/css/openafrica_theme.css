@@ -1387,5 +1387,33 @@ label {
 
 .dataset-content {
   height: auto;
-  display: flex;
+  /* display: flex; */
+}
+.dataset-item .dataset-content .dataset-heading .label {
+  color: #FFF;
+  padding: 3px 8px 4px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+.btn-danger-serious {
+  border: 1px solid #d43f3a !important;
+  margin: 0 5px 5px 5px;
+}
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  color: #333333;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.container {
+  padding-bottom: 8px;
 }
