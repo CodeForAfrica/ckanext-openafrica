@@ -24,7 +24,6 @@
         <span class="icon-bar"></span>
       </a>
 
-
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
         <ul class="nav" style="flex: 1;">
@@ -32,14 +31,13 @@
           <li><a href="/organization">Organisations</a></li>
           <li><a href="/group">Groups</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="/datarequest">{{_('Data Requests')}}</a></li>
-          <!-- {% if h.is_plugin_enabled('datarequests') %}
+          {% if h.is_plugin_enabled('datarequests') %}
             {% if g.user %}
             <li><a href="/datarequest">{{_('Data Requests')}}</a></li>
             {% else %}
             <li><a href="/user/login?came_from=/datarequest">{{_('Data Requests')}}</a></li>
             {% endif %}
-          {% endif %} -->
+          {% endif %}
         </ul>
         <ul class="nav pull-right">
           {% if c.userobj %}
