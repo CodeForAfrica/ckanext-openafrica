@@ -1044,6 +1044,12 @@ div.sort-datasets a {
   #email {
     width: 16em;
   }
+  .primary {
+    width: 100%
+  }
+  .secondary {
+    width: 100%
+  }
 }
 
 @media (max-width: 540px) {
