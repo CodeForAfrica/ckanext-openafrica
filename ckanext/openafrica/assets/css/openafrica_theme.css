@@ -618,7 +618,7 @@ input.button {
   padding: 10px 15px 10px 15px;
   border-bottom: 1px solid #ccc;
   position: relative;
-  min-height: 120px;
+  min-height: 150px;
   height: auto;
   list-style: none;
 }
