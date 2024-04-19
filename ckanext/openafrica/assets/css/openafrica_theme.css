@@ -1281,6 +1281,7 @@ label {
 }
 .wrapper:before {
   width: 19%;
+  display: none;
 }
 
 .navbar .nav > li > a {
