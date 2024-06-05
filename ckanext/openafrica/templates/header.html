@@ -8,32 +8,31 @@
       <!-- Be sure to leave the brand out there if you want it shown -->
       {% block header_logo %}
       {% if g.site_logo %}
-      <a class="logo brand" href="{{ h.url('home') }}"><img src="{{ g.site_logo }}" alt="{{ g.site_title }}"
+      <a class="logo brand" href="{{ h.url_for('home.index') }}"><img src="{{ g.site_logo }}" alt="{{ g.site_title }}"
           title="{{ g.site_title }}" /></a>
       {% else %}
-      <a class="brand" href="{{ h.url('home') }}"><img
+      <a class="brand" href="{{ h.url_for('home.index') }}"><img
           src="https://cloud.githubusercontent.com/assets/877919/14067805/7e3ff5ae-f476-11e5-88eb-059d88816232.png"
           alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
       {% endif %}
       {% endblock %}
 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <a class="btn btn-navbar" onclick="toggleNavbar()" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
 
-
       <!-- Everything you want hidden at 940px or less, place within here -->
-      <div class="nav-collapse collapse" style="height: auto;">
-        <ul class="nav">
+      <div class="nav-collapse collapse">
+        <ul class="nav" style="flex: 1;">
           <li><a href="/dataset">Datasets</a></li>
           <li><a href="/organization">Organisations</a></li>
           <li><a href="/group">Groups</a></li>
           <li><a href="/about">About</a></li>
           {% if h.is_plugin_enabled('datarequests') %}
-            {% if g.user %}
+            {% if current_user.is_authenticated %}
             <li><a href="/datarequest">{{_('Data Requests')}}</a></li>
             {% else %}
             <li><a href="/user/login?came_from=/datarequest">{{_('Data Requests')}}</a></li>
@@ -53,7 +52,7 @@
               <li><a href="{{ h.url_for(controller='admin', action='index') }}">Admin</a></li>
               {% endif %}
               <li>
-                <a href="{{ h.url_for(controller='dashboard', action='index') }}">Control Panel</a>
+                <a href="{{ h.url_for(controller='dashboard', action='datasets') }}">Control Panel</a>
               </li>
               <li><a href="{{ h.url_for(controller='user', action='edit', id=c.userobj.name) }}">Options</a></li>
               <li><a href="{{ h.url_for('/user/_logout') }}">Logout</a></li>
@@ -67,9 +66,15 @@
       </div>
     </div>
   </div>
+  <script>
+    function toggleNavbar() {
+      var navCollapse = document.querySelector('.nav-collapse');
+      navCollapse.classList.toggle('show');
+    }
+  </script>
 </div>
 {% endblock %}
 {%- block scripts %}
-{% asset 'openafrica/openafrica-bootstrap-js' %}
+{% asset 'openafrica/openafrica_bootstrap-js' %}
 {{ super() }}
 {% endblock -%}
