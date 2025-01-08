@@ -16,7 +16,8 @@ rules = [
     ("/about/moderation-policy", "moderation", static_path("home/about/moderation.html")),
     ("/about/faq", "faq", static_path("home/about/faq.html")),
     ("/about/privacy", "privacy", static_path("home/about/privacy.html")),
-    ("/about/contact-us", "contact", static_path("home/about/contact.html"))
+    ("/about/contact-us", "contact", static_path("home/about/contact.html")),
+    ("/robots.txt", "robots_txt", static_path("robots.txt"))
 ]
 
 for rule in rules:
