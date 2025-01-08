@@ -11,7 +11,7 @@ def static_path(path):
 
 def robots_txt():
     '''display robots.txt'''
-    resp = make_response(render('home/robots.txt'))
+    resp = make_response(render('robots.txt'))
     resp.headers['Content-Type'] = "text/plain; charset=utf-8"
     return resp
 
