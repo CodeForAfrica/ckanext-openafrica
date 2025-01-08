@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, make_response
 from ckan.plugins.toolkit import render
 
 openafrica = Blueprint("openafrica", __name__)
@@ -9,6 +9,12 @@ def static_path(path):
 
     return render_path
 
+def robots_txt():
+    '''display robots.txt'''
+    resp = make_response(render('home/robots.txt'))
+    resp.headers['Content-Type'] = "text/plain; charset=utf-8"
+    return resp
+
 rules = [
     ("/about/terms-and-conditions", "toc", static_path("home/about/toc.html")),
     ("/about/accessibility", "accessibility", static_path("home/about/accessibility.html")),
@@ -17,7 +23,7 @@ rules = [
     ("/about/faq", "faq", static_path("home/about/faq.html")),
     ("/about/privacy", "privacy", static_path("home/about/privacy.html")),
     ("/about/contact-us", "contact", static_path("home/about/contact.html")),
-    ("/robots.txt", "robots_txt", static_path("robots.txt"))
+    ("/robots.txt", robots_txt)
 ]
 
 for rule in rules:
