@@ -1,0 +1,70 @@
+{% ckan_extends %}
+
+{% block additional_user_agents -%}
+# Amazonbot
+User-agent: Amazonbot
+Disallow: /
+
+# anthropic-ai
+User-agent: anthropic-ai
+Disallow: /
+
+# Applebot
+User-agent: Applebot
+Disallow: /
+
+# Applebot-Extended
+User-agent: Applebot-Extended
+Disallow: /
+
+# Bytespider
+User-agent: Bytespider
+Disallow: /
+
+# CCBot
+User-agent: CCBot
+Disallow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Disallow: /
+
+# Claude-Web
+User-agent: Claude-Web
+Disallow: /
+
+# ClaudeBot
+User-agent: ClaudeBot
+Disallow: /
+
+# cohere-ai
+User-agent: cohere-ai
+Disallow: /
+
+# Diffbot
+User-agent: Diffbot
+Disallow: /
+
+# FacebookBot
+User-agent: FacebookBot
+Disallow: /
+
+# Google-Extended
+User-agent: Google-Extended
+Disallow: /
+
+# GPTBot
+User-agent: GPTBot
+Disallow: /
+
+# omgili
+User-agent: omgili
+Disallow: /
+
+# PerplexityBot
+User-agent: PerplexityBot
+Disallow: /
+
+# Generatedy by RoboShield (https://roboshield.trustlab.africa)
+
+{%- endblock %}
