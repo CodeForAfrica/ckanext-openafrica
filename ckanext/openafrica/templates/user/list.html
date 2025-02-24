@@ -17,7 +17,7 @@
       <h1 class="page-heading">
         {% block page_heading %}{{ _('Users') }}{% endblock %}
       </h1>
-      {% if h.check_access('sysadmin', context) %}
+      {% if c.userobj.sysadmin %}
       {% block users_list %}
         <ul class="user-list">
           {% block users_list_inner %}
