@@ -1,15 +1,6 @@
-# Crawl-delay Specifies the minimum interval (in seconds)
-#for a robot to wait after loading one page, before starting to load another.
-Crawl-delay: 10
+{% ckan_extends %}
 
-# Disallow specifies the paths that are not allowed to be crawled by the robot.
-User-agent: *
-Disallow: /dataset/rate/
-Disallow: /revision/
-Disallow: /dataset/*/history
-Disallow: /api/
-Disallow: /user/
-
+{% block additional_user_agents -%}
 # Amazonbot
 User-agent: Amazonbot
 Disallow: /
@@ -74,5 +65,6 @@ Disallow: /
 User-agent: PerplexityBot
 Disallow: /
 
-
 # Generatedy by RoboShield (https://roboshield.trustlab.africa)
+
+{%- endblock %}
