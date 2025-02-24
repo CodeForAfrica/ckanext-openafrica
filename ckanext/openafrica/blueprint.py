@@ -23,7 +23,7 @@ rules = [
     ("/about/faq", "faq", static_path("home/about/faq.html")),
     ("/about/privacy", "privacy", static_path("home/about/privacy.html")),
     ("/about/contact-us", "contact", static_path("home/about/contact.html")),
-    ("/robots.txt", robots_txt)
+    ("/robots.txt", "robots_txt", robots_txt())
 ]
 
 for rule in rules:
