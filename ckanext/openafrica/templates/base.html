@@ -6,7 +6,7 @@
     stripped from request.path, so locale copies canonicalise to the clean URL.
     Filter/sort/search variants are noindexed instead (no canonical, to avoid
     mixed signals). Plain ?page=N stays indexable so deep datasets get crawled. -#}
-{%- set page_url = g.site_url ~ request.path ~ ('?page=' ~ request.args.page | urlencode if request.args.page else '') %}
+{%- set page_url = g.site_url ~ (request.path.rstrip('/') or '/') ~ ('?page=' ~ request.args.page | urlencode if request.args.page else '') %}
 {%- if request.args.keys() | reject('equalto', 'page') | list %}
 <meta name="robots" content="noindex, follow">
 {%- else %}
