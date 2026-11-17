@@ -2,12 +2,22 @@
 
 {% block meta %}
 {{ super() }}
+{#- SEO: one indexable URL per page. Locale prefixes (/tl/...) are already
+    stripped from request.path, so locale copies canonicalise to the clean URL.
+    Filter/sort/search variants are noindexed instead (no canonical, to avoid
+    mixed signals). Plain ?page=N stays indexable so deep datasets get crawled. -#}
+{%- set page_url = g.site_url ~ (request.path.rstrip('/') or '/') ~ ('?page=' ~ request.args.page | urlencode if request.args.page else '') %}
+{%- if request.args.keys() | reject('equalto', 'page') | list %}
+<meta name="robots" content="noindex, follow">
+{%- else %}
+<link rel="canonical" href="{{ page_url }}" />
+{%- endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:image" content="https://africaopendata.org/images/logos/open-africa.png" />
+<meta property="og:image" content="{{ h.url_for_static('/images/logos/open-africa.png', qualified=True) }}" />
 <meta property="og:title" content="openAFRICA" />
 <meta property="og:description"
   content="Africa's Largest Volunteer Driven Open Data Platform. openAFRICA aims to be largest independent repository of open data on the African continent." />
-<meta property="og:url" content="https://africaopendata.org/" />
+<meta property="og:url" content="{{ page_url }}" />
 <meta property="fb:app_id" content="835169686614108" />
 {% endblock %}
 
