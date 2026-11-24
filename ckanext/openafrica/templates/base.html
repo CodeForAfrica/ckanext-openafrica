@@ -5,8 +5,15 @@
 {#- SEO: one indexable URL per page. Locale prefixes (/tl/...) are already
     stripped from request.path, so locale copies canonicalise to the clean URL.
     Filter/sort/search variants are noindexed instead (no canonical, to avoid
-    mixed signals). Plain ?page=N stays indexable so deep datasets get crawled. -#}
-{%- set page_url = g.site_url ~ (request.path.rstrip('/') or '/') ~ ('?page=' ~ request.args.page | urlencode if request.args.page else '') %}
+    mixed signals). Plain ?page=N stays indexable so deep datasets get crawled.
+    Resource view pages (/resource/<id>/view/<view_id>) canonicalise to their
+    resource page, which shows the same content. -#}
+{%- set page_path = request.path.rstrip('/') %}
+{%- set res_parts = page_path.rsplit('/resource/', 1) %}
+{%- if res_parts | length == 2 and '/view/' in res_parts[1] %}
+  {%- set page_path = res_parts[0] ~ '/resource/' ~ res_parts[1].split('/view/')[0] %}
+{%- endif %}
+{%- set page_url = g.site_url ~ (page_path or '/') ~ ('?page=' ~ request.args.page | urlencode if request.args.page else '') %}
 {%- if request.args.keys() | reject('equalto', 'page') | list %}
 <meta name="robots" content="noindex, follow">
 {%- else %}
