@@ -28,6 +28,13 @@ Example:
   {% set text_query_none = _('No organisations found for "{query}"') %}
   {% set text_no_query = ungettext('{number} organisation found', '{number} organisations found', count) %}
   {% set text_no_query_none = _('No organisations found') %}
+
+{#- Any other type (e.g. ckanext-harvest's 'harvest'); copied from CKAN core. -#}
+{% else %}
+  {% set text_query = ungettext('{number} ' + type + ' found for "{query}"', '{number} ' + type + 's found for "{query}"', count) %}
+  {% set text_query_none = _('No ' + type + 's found for "{query}"') %}
+  {% set text_no_query = ungettext('{number} ' + type + ' found', '{number} ' + type + 's found', count) %}
+  {% set text_no_query_none = _('No ' + type + 's found') %}
 {%- endif -%}
 
 {% if query %}
